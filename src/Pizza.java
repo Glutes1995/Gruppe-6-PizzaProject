@@ -1,6 +1,6 @@
 public class Pizza {
     private String name;
-    private double price;
+    private int price;
     private String toppings;
 
     public Pizza() {
@@ -9,7 +9,7 @@ public class Pizza {
         toppings = "Tomato sauce, cheese";
     }
 
-    public Pizza(String name, double price, String toppings) {
+    public Pizza(String name, int price, String toppings) {
         this.name = name;
         this.price = price;
         this.toppings = toppings;
@@ -28,13 +28,13 @@ public class Pizza {
         return toppings;
     }
 
-    //Setter for Pizza price
-    public void setPrice(double price) {
+    //Sets Pizza price
+    public void setPrice(int price) {
         this.price = price;
     }
 
     //toString override to print Pizzas
     public String toString() {
-        return name + "\n" + toppings + "\n" + price + " kr";
+        return name + ": " + toppings + "..........................." + price + ",-";
     }
 }
