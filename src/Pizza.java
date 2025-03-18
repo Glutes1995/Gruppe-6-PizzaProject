@@ -14,6 +14,7 @@ public class Pizza {
         this.price = price;
         this.toppings = toppings;
     }
+
     //Getters for Pizza attributes
     public String getName() {
         return name;
@@ -26,10 +27,12 @@ public class Pizza {
     public String getToppings() {
         return toppings;
     }
+
     //Setter for Pizza price
     public void setPrice(double price) {
         this.price = price;
     }
+
     //toString override to print Pizzas
     public String toString() {
         return name + "\n" + toppings + "\n" + price + " kr";
