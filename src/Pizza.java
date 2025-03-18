@@ -1,18 +1,12 @@
 public class Pizza {
     private String name;
     private int price;
-    private String toppings;
+    private String topping;
 
-    public Pizza() {
-        name = "Margarita";
-        price = 65;
-        toppings = "Tomato sauce, cheese";
-    }
-
-    public Pizza(String name, int price, String toppings) {
+    public Pizza(String name, int price, String topping) {
         this.name = name;
         this.price = price;
-        this.toppings = toppings;
+        this.topping = topping;
     }
 
     //Getters for Pizza attributes
@@ -25,7 +19,7 @@ public class Pizza {
     }
 
     public String getToppings() {
-        return toppings;
+        return topping;
     }
 
     //Sets Pizza price
@@ -35,6 +29,6 @@ public class Pizza {
 
     //toString override to print Pizzas
     public String toString() {
-        return name + ": " + toppings + "..........................." + price + ",-";
+        return name + ": " + topping + "..........................." + price + ",-";
     }
 }
