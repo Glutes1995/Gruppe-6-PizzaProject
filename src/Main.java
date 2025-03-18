@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World, it is I, dev");
+        Pizza pizza = new Pizza("Margarita", 65, "Tomato sauce, cheese");
+        System.out.println(pizza);
     }
 }
