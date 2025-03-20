@@ -11,7 +11,7 @@ public class Pizza {
         this.pizzaNumber = pizzaNumber;
     }
 
-    //Getters for Pizza attributes/instansvariable
+    //Getters for at kunne tilgå Pizza attributes/instansvariable udenfor Pizza klassen
     public String getName() {
         return name;
     }
@@ -29,7 +29,7 @@ public class Pizza {
         this.price = price;
     }
 
-    //toString override to print a Pizzas name
+    //Pizza toString override til at printe en pizzas navn
     public String toString() {
         return name;
     }
