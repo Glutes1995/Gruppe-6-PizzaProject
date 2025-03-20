@@ -24,7 +24,7 @@ public class Pizza {
         return pizzaNumber;
     }
 
-    //Sets Pizza price
+    //Sætter Pizza price
     public void setPrice(int price) {
         this.price = price;
     }
