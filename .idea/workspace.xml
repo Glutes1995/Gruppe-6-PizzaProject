@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7c54e80-2297-4f98-b178-2c97ea6b3336" name="Changes" comment="Tilføjet mit github user name">
+    <list default="true" id="b7c54e80-2297-4f98-b178-2c97ea6b3336" name="Changes" comment="slettede overloading constructor">
+      <change afterPath="$PROJECT_DIR$/src/OrderList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bestillinger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pizza.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +37,15 @@
     &quot;assignee&quot;: &quot;Glutes1995&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Glutes1995/Gruppe-6-PizzaProject.git",
-    "accountId": "99a8a99a-fb9b-4281-b99f-c95e53270040"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Glutes1995/Gruppe-6-PizzaProject.git&quot;,
+    &quot;accountId&quot;: &quot;99a8a99a-fb9b-4281-b99f-c95e53270040&quot;
   }
-}]]></component>
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -97,6 +104,12 @@
       <workItem from="1742253724105" duration="693000" />
       <workItem from="1742254508463" duration="3426000" />
       <workItem from="1742319178870" duration="2460000" />
+      <workItem from="1742327867490" duration="320000" />
+      <workItem from="1742328275963" duration="5000" />
+      <workItem from="1742381699204" duration="793000" />
+      <workItem from="1742393027990" duration="975000" />
+      <workItem from="1742398134528" duration="1244000" />
+      <workItem from="1742471354339" duration="1204000" />
     </task>
     <task id="LOCAL-00001" summary="Adding java project to github repo">
       <option name="closed" value="true" />
@@ -186,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742300648434</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="slettede overloading constructor">
+      <option name="closed" value="true" />
+      <created>1742328075711</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1742328075711</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +225,7 @@
     <MESSAGE value="added Pizza class to test" />
     <MESSAGE value="added space" />
     <MESSAGE value="Tilføjet mit github user name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet mit github user name" />
+    <MESSAGE value="slettede overloading constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="slettede overloading constructor" />
   </component>
 </project>
