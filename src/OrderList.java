@@ -14,8 +14,9 @@ public class OrderList {
         return sum;
     }
 
-    //Denne metode tager et Order object som parameter om tilføjer det til vores arrayliste, orderList
-    void addOrderToOrderList(Order order){
+    //Denne metode tager et input som skaber en ny Order der bliver tilføjet til orderList
+    void addOrder(String scannerInput){
+        Order order = new Order();
         orderList.add(order);
     }
 
