@@ -5,8 +5,8 @@ public class PizzaMenu {
     private ArrayList<Pizza> pizzaMenu = new ArrayList<>();
 
     //metode til at tilføje pizzaer til menukortet
-    public void addPizza(String name, int price, int pizzaNumber) {
-        Pizza pizza = new Pizza(name, price, pizzaNumber);
+    public void addPizza(String name, int price, int pizzaNumber, String topping) {
+        Pizza pizza = new Pizza(name, price, pizzaNumber, topping);
         pizzaMenu.add(pizza);
     }
 
@@ -37,7 +37,7 @@ public class PizzaMenu {
     public String toString() {
         String pizzas = "PIZZA MENU\n";
         for (Pizza pizza : pizzaMenu) {
-            pizzas += pizza.getPizzaNumber() + ". " + pizza + ": " + "........." + pizza.getPrice() + ",-\n";
+            pizzas += pizza.getPizzaNumber() + ". " + pizza + ": " + pizza.getTopping() + "............." + pizza.getPrice() + ",-\n";
         }
         return pizzas;
     }

@@ -5,12 +5,14 @@ public class Main {
         //Man kan bare slette hvad end der er her i main og teste det man nu skal have testet"
 
         PizzaMenu pizzaMenu = new PizzaMenu();
-        Pizza pizza = new Pizza("Margarita",49,1);
 
-        pizzaMenu.addPizza("Margarita",49,1);
+        pizzaMenu.addPizza("Margarita",49,1,"Tomato sauce, Cheese");
         System.out.println(pizzaMenu);
 
         pizzaMenu.removePizza(1);
         System.out.println(pizzaMenu);
+
+        Pizza pizza = new Pizza("Meat lover", 69, 2);
+        System.out.println(pizza);
     }
 }
