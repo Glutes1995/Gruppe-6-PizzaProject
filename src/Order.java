@@ -8,7 +8,7 @@ public class Order {
     private int deliveryTimeHours;
     private int deliveryTimeMinutes;
 
-    //Order constructor
+    //Order constructor, der giver et nyoprettet Order objekt et unikt ID
     public Order() {
         orderIDCounter++;
         orderID = orderIDCounter;
