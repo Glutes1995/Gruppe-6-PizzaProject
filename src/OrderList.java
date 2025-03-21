@@ -14,6 +14,11 @@ public class OrderList {
         return sum;
     }
 
+    //Denne metode tager et Order object som parameter om tilføjer det til vores arrayliste, orderList
+    void addOrderToOrderList(Order order){
+        orderList.add(order);
+    }
+
     //OrderList toString override til at printe alle odre på ordre listen
     public String toString() {
         String orders = "";
