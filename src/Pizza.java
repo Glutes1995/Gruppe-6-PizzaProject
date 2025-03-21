@@ -3,15 +3,24 @@ public class Pizza {
     private String name;
     private int price;
     private int pizzaNumber;
+    private String topping;
 
-    //Pizza constructor
+    //Pizza constructor til pizzaerne, der skal tilføjes til orderen
     public Pizza(String name, int price, int pizzaNumber) {
         this.name = name;
         this.price = price;
         this.pizzaNumber = pizzaNumber;
     }
 
-    //Getters for Pizza attributes/instansvariable
+    //Pizza constructor til pizzaerne, der skal tilføjes til menukortet
+    public Pizza(String name, int price, int pizzaNumber, String topping) {
+        this.name = name;
+        this.price = price;
+        this.pizzaNumber = pizzaNumber;
+        this.topping = topping;
+    }
+
+    //Getters for at kunne tilgå Pizza attributes/instansvariable udenfor Pizza klassen
     public String getName() {
         return name;
     }
@@ -24,12 +33,16 @@ public class Pizza {
         return pizzaNumber;
     }
 
-    //Sets Pizza price
+    public String getTopping() {
+        return topping;
+    }
+
+    //Setter til en pizzas pris, så man kan ændre i priserne på menukortet
     public void setPrice(int price) {
         this.price = price;
     }
 
-    //toString override to print a Pizzas name
+    //Pizza toString override til at printe en pizzas navn
     public String toString() {
         return name;
     }
