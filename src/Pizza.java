@@ -37,7 +37,7 @@ public class Pizza {
         return topping;
     }
 
-    //Sætter Pizza price
+    //Setter til en pizzas pris, så man kan ændre i priserne på menukortet
     public void setPrice(int price) {
         this.price = price;
     }
