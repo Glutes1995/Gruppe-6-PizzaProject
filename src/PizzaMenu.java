@@ -4,7 +4,7 @@ public class PizzaMenu {
     //PizzaMenu instansvariabel
     private ArrayList<Pizza> pizzaMenu = new ArrayList<>();
 
-    //Metoden tilføjer alle pizzaerne på menukortet til et PizzaMenu objekt
+    //Metoden tilføjer menukortet til et PizzaMenu objekt
     public void addPizzaMenu(PizzaMenu pizzaMenu) {
         pizzaMenu.addPizza("Margarita",49,1,"Tomato sauce, Cheese");
         pizzaMenu.addPizza("Hawaii", 55, 2,"Tomato sauce, Cheese, Ham, Pineapple");
