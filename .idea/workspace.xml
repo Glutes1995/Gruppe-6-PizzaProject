@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b7c54e80-2297-4f98-b178-2c97ea6b3336" name="Changes" comment="Arbejder på menukortet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PizzaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PizzaMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +107,7 @@
       <workItem from="1742398134528" duration="1244000" />
       <workItem from="1742471354339" duration="1204000" />
       <workItem from="1742489975473" duration="5170000" />
-      <workItem from="1742552235702" duration="3602000" />
+      <workItem from="1742552235702" duration="4827000" />
     </task>
     <task id="LOCAL-00001" summary="Adding java project to github repo">
       <option name="closed" value="true" />
@@ -255,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742553408212</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Arbejder på menukortet">
+      <option name="closed" value="true" />
+      <created>1742563674543</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1742563674543</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
