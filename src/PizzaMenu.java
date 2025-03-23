@@ -34,7 +34,7 @@ public class PizzaMenu {
     }
 
     //getPizzaMenu er en metode der returnerer pizzaMenu arraylisten så man kan få listen af pizzaer på menukortet
-    ArrayList<Pizza> getPizzaMenu(){
+    public ArrayList<Pizza> getPizzaMenu(){
         return pizzaMenu;
     }
 

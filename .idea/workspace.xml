@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7c54e80-2297-4f98-b178-2c97ea6b3336" name="Changes" comment="tilføjet kommentar">
+    <list default="true" id="b7c54e80-2297-4f98-b178-2c97ea6b3336" name="Changes" comment="Tilføjer en getPizzaMenu metode">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PizzaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PizzaMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +38,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Glutes1995/Gruppe-6-PizzaProject.git&quot;,
-    &quot;accountId&quot;: &quot;99a8a99a-fb9b-4281-b99f-c95e53270040&quot;
+    &quot;accountId&quot;: &quot;e92c1884-3d12-49f3-be1f-d6d6ec16d17f&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -51,22 +53,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "MakeANewOrder-Method",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/glute/IdeaProjects/Gruppe-6-PizzaProject",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;MakeANewOrder-Method&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/glute/IdeaProjects/Gruppe-6-PizzaProject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -81,8 +83,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.153" />
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.153" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
       </set>
     </attachedChunks>
   </component>
@@ -107,6 +109,8 @@
       <workItem from="1742398134528" duration="1244000" />
       <workItem from="1742471354339" duration="1204000" />
       <workItem from="1742489975473" duration="5170000" />
+      <workItem from="1742558551337" duration="1204000" />
+      <workItem from="1742741088668" duration="307000" />
     </task>
     <task id="LOCAL-00001" summary="Adding java project to github repo">
       <option name="closed" value="true" />
@@ -244,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742547121653</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Tilføjer en getPizzaMenu metode">
+      <option name="closed" value="true" />
+      <created>1742558221420</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1742558221420</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +291,7 @@
     <MESSAGE value="oversat engelsk til dansk" />
     <MESSAGE value="tilføjet ekstra constructor til pizzaerne på menukortet" />
     <MESSAGE value="tilføjet kommentar" />
-    <option name="LAST_COMMIT_MESSAGE" value="tilføjet kommentar" />
+    <MESSAGE value="Tilføjer en getPizzaMenu metode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tilføjer en getPizzaMenu metode" />
   </component>
 </project>
