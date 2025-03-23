@@ -15,6 +15,17 @@ public class Main {
         Pizza pizza = new Pizza("Meat lover", 69, 2);
         System.out.println(pizza);
 
+        //Test OrderList og Order klasserne
+        pizzaMenu.addPizza("Margarita",49,1,"Tomato sauce, Cheese");
+        System.out.println(pizzaMenu);
 
+        OrderList orderList = new OrderList();
+
+        orderList.addOrder(pizzaMenu);
+        System.out.println("OrderList: " + orderList.toString());
+        orderList.addOrder(pizzaMenu);
+        System.out.println("OrderList: " + orderList.toString());
+        orderList.addOrder(pizzaMenu);
+        System.out.println("OrderList: " + orderList.toString());
     }
 }

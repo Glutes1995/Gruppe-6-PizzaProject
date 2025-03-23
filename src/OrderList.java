@@ -20,16 +20,23 @@ public class OrderList {
         Scanner input = new Scanner(System.in);
         Order order = new Order();
 
+        System.out.println("Enter the name or number of a pizza or type done to end the order.");
         String userInput = input.nextLine();
 
-        try{
-            int pizzaNumber = Integer.parseInt(userInput);
-            order.addPizza(menu, pizzaNumber);
-        }catch(NumberFormatException e){
-            order.addPizza(menu, userInput);
-        }
+        while(!userInput.equalsIgnoreCase("done")){
+            //try catch prøver at omdanne brugerinputted til en int
+            try{
+                int pizzaNumber = Integer.parseInt(userInput);
+                order.addPizza(menu, pizzaNumber);
+            }catch(NumberFormatException e){
+                order.addPizza(menu, userInput);
+            }
 
-        orderList.add(order);
+            orderList.add(order);
+
+            System.out.println("Enter the name or number of a pizza or type done to end the order.");
+            userInput = input.nextLine();
+        }
     }
 
     //OrderList toString override til at printe alle odre på ordre listen
