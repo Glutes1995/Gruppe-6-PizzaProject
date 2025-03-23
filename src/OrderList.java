@@ -14,6 +14,11 @@ public class OrderList {
         return sum;
     }
 
+    //denne metode kan tilføje et givent odre-objekt til ordre-listen
+    void addOrderToOrderList(Order order){
+        orderList.add(order);
+    }
+
     //OrderList toString override til at printe alle odre på ordre listen
     public String toString() {
         String orders = "";
