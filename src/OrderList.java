@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class OrderList {
     //OrderList instansvariable
@@ -15,7 +16,19 @@ public class OrderList {
     }
 
     //denne metode kan tilføje et givent odre-objekt til ordre-listen
-    void addOrderToOrderList(Order order){
+    void addOrder(PizzaMenu menu){
+        Scanner input = new Scanner(System.in);
+        Order order = new Order();
+
+        String userInput = input.nextLine();
+
+        try{
+            int pizzaNumber = Integer.parseInt(userInput);
+            order.addPizza(menu, pizzaNumber);
+        }catch(NumberFormatException e){
+            order.addPizza(menu, userInput);
+        }
+
         orderList.add(order);
     }
 
