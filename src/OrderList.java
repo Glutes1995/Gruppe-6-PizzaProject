@@ -35,7 +35,13 @@ public class OrderList {
             userInput = scanner.nextLine();
         }
 
+        order.addOrderDeliveryTime(scanner);
         orderList.add(order);
+    }
+
+    //metoden sorterer Order objekter i orderlisten. Ved at  et Order objekt til compareTo metoden, kan den sammenligne dem.
+    public void sortOrders() {
+        orderList.sort(Order::compareTo);
     }
 
     //OrderList toString override til at printe alle odre på ordre listen
