@@ -4,10 +4,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //Variabler
+        //Generelle variabler, instanser og objekter
+
+            //Pizzamenu objekt og instantiering af objekt
         PizzaMenu pizzaMenu = new PizzaMenu();
+        pizzaMenu.addPizzaMenu(pizzaMenu);
+
+            //Pizza objekt og instantiering af objektet
+        Pizza pizza = new Pizza();
+
+
         Scanner scanner = new Scanner(System.in);
         boolean actionMenu = true;
+
+        //OrderList objekt laves
         OrderList orderList = new OrderList();
 
         while(actionMenu){
@@ -20,9 +30,12 @@ public class Main {
             //Læser brugerens input
             String actions = scanner.nextLine();
 
+
+
             switch (actions){
                 case "1": //Viser pizza menu
                     pizzaMenu.getPizzaMenu();
+                    System.out.println(pizzaMenu);
                     break;
 
                 case "2": //Lav bestilling
@@ -31,6 +44,8 @@ public class Main {
                     break;
 
                 case "3": //Ændre en pris på pizza
+                    System.out.println(pizzaMenu);
+                    pizza.setPrice();
 
                     break;
 

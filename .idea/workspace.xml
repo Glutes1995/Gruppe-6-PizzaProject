@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d6d9efd-ad95-42fb-a9b0-f7054d5bd28b" name="Changes" comment="Lavet en Switch menu">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,13 +114,13 @@
       <option name="project" value="LOCAL" />
       <updated>1742810951639</updated>
     </task>
-    <task id="LOCAL-00002" summary="Added working main with hello world">
+    <task id="LOCAL-00002" summary="Lavet en Switch menu">
       <option name="closed" value="true" />
-      <created>1742232203430</created>
+      <created>1742811641519</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1742232203430</updated>
+      <updated>1742811641519</updated>
     </task>
     <task id="LOCAL-00003" summary="trying to merge master into main">
       <option name="closed" value="true" />
@@ -243,7 +242,7 @@
       <option name="project" value="LOCAL" />
       <updated>1742547121653</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
