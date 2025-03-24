@@ -66,6 +66,14 @@ public class Order {
         return sum;
     }
 
+    //metoden sammenligner størrelsen mellem to Order objekters, to integers. Hvis -1, er den mindre. Hvis 1, er den større.
+    public int compareTo(Order order) {
+        if (this.deliveryTimeHours < order.deliveryTimeHours) return -1;
+        if (this.deliveryTimeHours == order.deliveryTimeHours && this.deliveryTimeMinutes < order.deliveryTimeMinutes)
+            return -1;
+        return 1;
+    }
+
     //Order toString override til at printe alle pizzaer på en ordre og orderens ID/nummer
     public String toString() {
         String pizzas = "Order " + getOrderID() + " " + deliveryTimeHours + ":" + deliveryTimeMinutes + "\n";
