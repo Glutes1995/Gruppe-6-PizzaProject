@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5891f41a-4426-4b07-8393-5fcb98093d14" name="Changes" comment="test af order afhentningstidspunkt virker" />
+    <list default="true" id="5891f41a-4426-4b07-8393-5fcb98093d14" name="Changes" comment="test af order afhentningstidspunkt virker">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,13 +126,13 @@
       <option name="project" value="LOCAL" />
       <updated>1742814247827</updated>
     </task>
-    <task id="LOCAL-00003" summary="trying to merge master into main">
+    <task id="LOCAL-00003" summary="test af order afhentningstidspunkt virker">
       <option name="closed" value="true" />
-      <created>1742233106690</created>
+      <created>1742814607081</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1742233106690</updated>
+      <updated>1742814607081</updated>
     </task>
     <task id="LOCAL-00004" summary="trying to merge master into main">
       <option name="closed" value="true" />
@@ -242,7 +246,7 @@
       <option name="project" value="LOCAL" />
       <updated>1742547121653</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +283,7 @@
     <MESSAGE value="tilføjet kommentar" />
     <MESSAGE value="tilføjet scanner som parameter i addOrder metoden og metoden er blevet testet" />
     <MESSAGE value="tilføjer afhentningstidspunkt til addOrder metoden ved at lave en addOrderDeliveryTime metode" />
+    <MESSAGE value="tilføjet sort feature" />
     <MESSAGE value="test af order afhentningstidspunkt virker" />
     <option name="LAST_COMMIT_MESSAGE" value="test af order afhentningstidspunkt virker" />
   </component>

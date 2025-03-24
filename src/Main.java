@@ -11,12 +11,15 @@ public class Main {
         OrderList orderList = new OrderList();
 
         orderList.addOrder(pizzaMenu, scanner);
+        orderList.sortOrders();
         System.out.println(orderList);
 
         orderList.addOrder(pizzaMenu, scanner);
+        orderList.sortOrders();
         System.out.println(orderList);
 
         orderList.addOrder(pizzaMenu, scanner);
+        orderList.sortOrders();
         System.out.println(orderList);
     }
 }

@@ -74,11 +74,19 @@ public class Order {
         return 1;
     }
 
-    //Order toString override til at printe alle pizzaer på en ordre og orderens ID/nummer
+    //Order toString override til at printe alle pizzaer på en ordre og dens ID/nummer, samt afhentningstidspunkt
     public String toString() {
-        String pizzas = "Order " + getOrderID() + " " + deliveryTimeHours + ":" + deliveryTimeMinutes + "\n";
-        for (Pizza pizza : pizzaList) {
-            pizzas += pizza + "\n";
+        String pizzas;
+        if (deliveryTimeMinutes == 0) {
+            pizzas = "Order " + orderID + " for " + deliveryTimeHours + ":" + deliveryTimeMinutes + "0\n";
+            for (Pizza pizza : pizzaList) {
+                pizzas += pizza + "\n";
+            }
+        } else {
+            pizzas = "Order " + orderID + " for " + deliveryTimeHours + ":" + deliveryTimeMinutes + "\n";
+            for (Pizza pizza : pizzaList) {
+                pizzas += pizza + "\n";
+            }
         }
         return pizzas;
     }
