@@ -68,7 +68,7 @@ public class Order {
 
     //Order toString override til at printe alle pizzaer på en ordre og orderens ID/nummer
     public String toString() {
-        String pizzas = "Order " + getOrderID() + "\n";
+        String pizzas = "Order " + getOrderID() + " " + deliveryTimeHours + ":" + deliveryTimeMinutes + "\n";
         for (Pizza pizza : pizzaList) {
             pizzas += pizza + "\n";
         }
