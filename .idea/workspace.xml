@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7c54e80-2297-4f98-b178-2c97ea6b3336" name="Changes" comment="Arbejder på menukortet" />
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="MakeANewOrder-Method" />
+
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,7 +34,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Glutes1995/Gruppe-6-PizzaProject.git&quot;,
-    &quot;accountId&quot;: &quot;99a8a99a-fb9b-4281-b99f-c95e53270040&quot;
+    &quot;accountId&quot;: &quot;e92c1884-3d12-49f3-be1f-d6d6ec16d17f&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -54,7 +54,7 @@
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;pizzaMenu&quot;,
+
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/glute/IdeaProjects/Gruppe-6-PizzaProject&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -79,8 +79,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.153" />
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.153" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
       </set>
     </attachedChunks>
   </component>
@@ -105,7 +105,7 @@
       <workItem from="1742398134528" duration="1244000" />
       <workItem from="1742471354339" duration="1204000" />
       <workItem from="1742489975473" duration="5170000" />
-      <workItem from="1742552235702" duration="4827000" />
+
     </task>
     <task id="LOCAL-00001" summary="Adding java project to github repo">
       <option name="closed" value="true" />
@@ -243,39 +243,7 @@
       <option name="project" value="LOCAL" />
       <updated>1742547121653</updated>
     </task>
-    <task id="LOCAL-00018" summary="Arbejder på menukortet">
-      <option name="closed" value="true" />
-      <created>1742553408212</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1742553408212</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Arbejder på menukortet">
-      <option name="closed" value="true" />
-      <created>1742563674543</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1742563674543</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Arbejder på menukortet">
-      <option name="closed" value="true" />
-      <created>1742808061443</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1742808061443</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Arbejder på menukortet">
-      <option name="closed" value="true" />
-      <created>1742808411334</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1742808411334</updated>
-    </task>
-    <option name="localTasksCounter" value="22" />
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +278,6 @@
     <MESSAGE value="oversat engelsk til dansk" />
     <MESSAGE value="tilføjet ekstra constructor til pizzaerne på menukortet" />
     <MESSAGE value="tilføjet kommentar" />
-    <MESSAGE value="Arbejder på menukortet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arbejder på menukortet" />
+
   </component>
 </project>
