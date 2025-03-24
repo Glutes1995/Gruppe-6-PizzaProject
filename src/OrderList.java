@@ -35,6 +35,7 @@ public class OrderList {
             userInput = scanner.nextLine();
         }
 
+        order.addOrderDeliveryTime(scanner);
         orderList.add(order);
     }
 

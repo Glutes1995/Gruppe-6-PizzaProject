@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Order {
     //Order instansvariable
@@ -25,6 +26,17 @@ public class Order {
 
     public int getDeliveryTimeMinutes() {
         return deliveryTimeMinutes;
+    }
+
+    void addOrderDeliveryTime(Scanner scanner){
+        String input;
+
+        System.out.println("Write your delivery time as 00:00 hours:minutes");
+        input = scanner.nextLine();
+
+        String[] timeSplit = input.split(":");
+        deliveryTimeHours = Integer.parseInt(timeSplit[0]);
+        deliveryTimeMinutes = Integer.parseInt(timeSplit[1]);
     }
 
     //addPizza metoden tager den pizzamenuen som parametrer for at tilføje pizza'er fra den allerde etablerede menu
