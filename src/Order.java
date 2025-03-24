@@ -66,7 +66,7 @@ public class Order {
         return sum;
     }
 
-    //metoden sammenligner størrelsen mellem to Order objekters, to integers. Hvis -1, er den mindre. Hvis 1, er den større.
+    //metoden sammenligner størrelsen mellem to Order objekters afhentningstidspunkt. Hvis -1, er den mindre. Hvis 1, er den større.
     public int compareTo(Order order) {
         if (this.deliveryTimeHours < order.deliveryTimeHours) return -1;
         if (this.deliveryTimeHours == order.deliveryTimeHours && this.deliveryTimeMinutes < order.deliveryTimeMinutes)
