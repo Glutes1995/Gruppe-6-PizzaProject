@@ -16,15 +16,14 @@ public class OrderList {
     }
 
     //denne metode kan tilføje et givent odre-objekt til ordre-listen
-    void addOrder(PizzaMenu menu){
-        Scanner input = new Scanner(System.in);
+    void addOrder(PizzaMenu menu, Scanner scanner){
         Order order = new Order();
-
         System.out.println("Enter the name or number of a pizza or type done to end the order.");
-        String userInput = input.nextLine();
+        String userInput = scanner.nextLine();
 
+        //tilføjer pizzaer til odren indtil man skriver done
         while(!userInput.equalsIgnoreCase("done")){
-            //try catch prøver at omdanne brugerinputted til en int
+            //try catch fanger fejl ved at omdanne en String til en Integer
             try{
                 int pizzaNumber = Integer.parseInt(userInput);
                 order.addPizza(menu, pizzaNumber);
@@ -32,11 +31,11 @@ public class OrderList {
                 order.addPizza(menu, userInput);
             }
 
-            orderList.add(order);
-
             System.out.println("Enter the name or number of a pizza or type done to end the order.");
-            userInput = input.nextLine();
+            userInput = scanner.nextLine();
         }
+
+        orderList.add(order);
     }
 
     //OrderList toString override til at printe alle odre på ordre listen
