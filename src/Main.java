@@ -23,7 +23,6 @@ public class Main {
 
         orderList.saveOrder();
         orderList.saveOrder();
-        orderList.saveOrder();
 
         orderList.orderRevenue();
     }
