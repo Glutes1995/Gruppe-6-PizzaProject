@@ -4,22 +4,24 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         PizzaMenu pizzaMenu = new PizzaMenu();
-        pizzaMenu.addPizzaMenu(pizzaMenu);
-
-        System.out.print(pizzaMenu);
+        pizzaMenu.addPizzaMenu();
+        System.out.println(pizzaMenu);
 
         OrderList orderList = new OrderList();
 
         orderList.addOrder(pizzaMenu, scanner);
-        orderList.sortOrders();
         System.out.println(orderList);
 
         orderList.addOrder(pizzaMenu, scanner);
-        orderList.sortOrders();
         System.out.println(orderList);
 
         orderList.addOrder(pizzaMenu, scanner);
-        orderList.sortOrders();
         System.out.println(orderList);
+
+        orderList.saveOrder();
+        orderList.saveOrder();
+        orderList.saveOrder();
+
+        orderList.orderRevenue();
     }
 }

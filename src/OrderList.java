@@ -7,12 +7,12 @@ public class OrderList {
     private ArrayList<Order> orderHistoryList = new ArrayList<>();
 
     //metode til at beregne dagens omsætning. Altså beregne alle odrepriser på ordrehistorikken
-    public int orderRevenue() {
+    public void orderRevenue() {
         int sum = 0;
         for (Order order : orderHistoryList) {
             sum += order.sumPizzaPrices();
         }
-        return sum;
+        System.out.println("Daily revenue: " + sum + ",-\n");
     }
 
     //denne metode kan tilføje et givent odre-objekt til ordre-listen
@@ -37,6 +37,39 @@ public class OrderList {
 
         order.addOrderDeliveryTime(scanner);
         orderList.add(order);
+        this.sortOrders();
+    }
+
+    //metode til at fjerne en ordre fra ordrelisten
+    public void removeOrder(Scanner scanner) {
+        System.out.println("Order id?");
+        int orderID = scanner.nextInt();
+        scanner.nextLine();
+        if (!isOrderOnList(orderID)) return;
+        for (Order order : orderList) {
+            if (orderID == order.getOrderID()) orderList.remove(order);
+            System.out.println("Order " + order.getOrderID() + " has been removed\n");
+            return;
+        }
+    }
+
+    //metode til at rykke en færdig ordre over på ordrehistorikken
+    public void saveOrder() {
+        for (Order order : orderList) {
+            orderList.remove(order);
+            orderHistoryList.add(order);
+            System.out.println("order " + order.getOrderID() + " has been saved in the order history\n");
+            break;
+        }
+    }
+
+    //metoden checker om en given ordre er på ordrelisten
+    public boolean isOrderOnList(int orderID) {
+        for (Order order : orderList) {
+            if (orderID == order.getOrderID()) return true;
+        }
+        System.out.println("Order not found\n");
+        return false;
     }
 
     //metoden sorterer Order objekter i orderlisten. Ved at  et Order objekt til compareTo metoden, kan den sammenligne dem.
