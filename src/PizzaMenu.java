@@ -96,7 +96,7 @@ public class PizzaMenu {
                 return;
             }
 
-            //Ændre pris med ID
+            //Ændrer pris med ID
             for (Pizza pizza : pizzaMenu) {
                 if (pizza.getPizzaNumber() == pizzaNumber) {
                     System.out.println("Prisen er nu " + pizza.getPrice() +
@@ -112,7 +112,7 @@ public class PizzaMenu {
                 System.out.println("Pizzaen kunne ikke findes");
                 return;
             }
-            //Ændre pris med pizzanavn
+            //Ændrer pris med pizzanavn
             for (Pizza pizza : pizzaMenu) {
                 if (pizza.getName().equalsIgnoreCase(userChoice)) {
                     System.out.println("Prisen er nu " + pizza.getPrice() +
