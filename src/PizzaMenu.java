@@ -30,11 +30,11 @@ public class PizzaMenu {
         pizzaMenu.addPizza("Vegan special",100, 22,"Tomato sauce, Eggplant, Mushroom, Zucchini, Fresh tomato, Spinach ");
         pizzaMenu.addPizza("Vegan tropical",100, 23,"Tomato sauce, Cheese, Peppers, Zucchini, Pineapple, Garlic");
         pizzaMenu.addPizza("Gluten free",100, 24,"Tomato sauce, Cheese, Ham, Pepperoni, Onion");
-        pizzaMenu.addPizza("August special",100, 25,"Tomato sauce, Cheese,");
-        pizzaMenu.addPizza("Joshua special",100, 26,"Tomato sauce, Cheese,");
-        pizzaMenu.addPizza("Simon special",100, 27,"Tomato sauce, Cheese,");
-        pizzaMenu.addPizza("Martin special",100, 28,"Tomato sauce, Cheese,");
-        pizzaMenu.addPizza("Group 6 special",100, 29,"Tomato sauce, Cheese,");
+        pizzaMenu.addPizza("August special",100, 25,"Tomato sauce, Cheese, Ham, Chocolate");
+        pizzaMenu.addPizza("Joshua special",100, 26,"Tomato sauce, Cheese, Kebab, Salad, Tomato, Dressing");
+        pizzaMenu.addPizza("Simon special",100, 27,"Tomato sauce, Cheese, Ham, Bacon, Pepperoni, Mushroom");
+        pizzaMenu.addPizza("Martin special",100, 28,"Tomato sauce, Cheese, Pepperoni, Pineapple, Garlic, Chili");
+        pizzaMenu.addPizza("Group 6 special",100, 29,"Tomato sauce, Cheese, Chocolate, Dressing, Mushroom, Pineapple");
         pizzaMenu.addPizza("The indian",100, 30,"Tomato sauce, Cheese, Butter chicken, Cashew sauce,");
         pizzaMenu.addPizza("Manhatten",100, 31,"Tomato sauce, Cheese, Beef, Bacon, Pepperoni");
     }
