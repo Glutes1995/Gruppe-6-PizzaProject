@@ -10,9 +10,6 @@ public class Main {
         PizzaMenu pizzaMenu = new PizzaMenu();
         pizzaMenu.addPizzaMenu(pizzaMenu);
 
-            //Pizza objekt og instantiering af objektet
-        Pizza pizza = new Pizza();
-
 
         Scanner scanner = new Scanner(System.in);
         boolean actionMenu = true;
@@ -45,7 +42,7 @@ public class Main {
 
                 case "3": //Ændre en pris på pizza
                     System.out.println(pizzaMenu);
-                    pizza.setPrice();
+                    //Tilføj metoden til at ændre prisen
 
                     break;
 
