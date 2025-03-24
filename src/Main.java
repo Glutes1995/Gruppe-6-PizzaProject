@@ -18,6 +18,9 @@ public class Main {
         orderList.addOrder(pizzaMenu, scanner);
         System.out.println(orderList);
 
+        orderList.removeOrder(scanner);
+        System.out.println(orderList);
+
         orderList.saveOrder();
         orderList.saveOrder();
         orderList.saveOrder();

@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5891f41a-4426-4b07-8393-5fcb98093d14" name="Changes" comment="Added Hello World so that main is working">
+    <list default="true" id="5891f41a-4426-4b07-8393-5fcb98093d14" name="Changes" comment="tilføjet save order feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OrderList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PizzaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PizzaMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,13 +135,13 @@
       <option name="project" value="LOCAL" />
       <updated>1742814607081</updated>
     </task>
-    <task id="LOCAL-00004" summary="trying to merge master into main">
+    <task id="LOCAL-00004" summary="tilføjet save order feature">
       <option name="closed" value="true" />
-      <created>1742233325858</created>
+      <created>1742820083689</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1742233325858</updated>
+      <updated>1742820083689</updated>
     </task>
     <task id="LOCAL-00005" summary="Added Hello World so that main is working">
       <option name="closed" value="true" />
@@ -247,7 +247,7 @@
       <option name="project" value="LOCAL" />
       <updated>1742547121653</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +286,7 @@
     <MESSAGE value="tilføjet sort feature" />
     <MESSAGE value="test af order afhentningstidspunkt virker" />
     <MESSAGE value="Added Hello World so that main is working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Hello World so that main is working" />
+    <MESSAGE value="tilføjet save order feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="tilføjet save order feature" />
   </component>
 </project>

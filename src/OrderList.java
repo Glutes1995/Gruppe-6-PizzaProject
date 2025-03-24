@@ -16,25 +16,24 @@ public class OrderList {
     }
 
     //denne metode kan tilføje et givent odre-objekt til ordre-listen
-    void addOrder(PizzaMenu menu, Scanner scanner){
+    void addOrder(PizzaMenu menu, Scanner scanner) {
         Order order = new Order();
         System.out.println("Enter the name or number of a pizza or type done to end the order.");
         String userInput = scanner.nextLine();
 
         //tilføjer pizzaer til odren indtil man skriver done
-        while(!userInput.equalsIgnoreCase("done")){
+        while (!userInput.equalsIgnoreCase("done")) {
             //try catch fanger fejl ved at omdanne en String til en Integer
-            try{
+            try {
                 int pizzaNumber = Integer.parseInt(userInput);
                 order.addPizza(menu, pizzaNumber);
-            }catch(NumberFormatException e){
+            } catch (NumberFormatException e) {
                 order.addPizza(menu, userInput);
             }
 
             System.out.println("Enter the name or number of a pizza or type done to end the order.");
             userInput = scanner.nextLine();
         }
-
         order.addOrderDeliveryTime(scanner);
         orderList.add(order);
         this.sortOrders();
@@ -42,14 +41,16 @@ public class OrderList {
 
     //metode til at fjerne en ordre fra ordrelisten
     public void removeOrder(Scanner scanner) {
-        System.out.println("Order id?");
+        System.out.println("Type in order id to remove");
         int orderID = scanner.nextInt();
         scanner.nextLine();
         if (!isOrderOnList(orderID)) return;
         for (Order order : orderList) {
-            if (orderID == order.getOrderID()) orderList.remove(order);
-            System.out.println("Order " + order.getOrderID() + " has been removed\n");
-            return;
+            if (orderID == order.getOrderID()) {
+                orderList.remove(order);
+                System.out.println("Order " + order.getOrderID() + " has been removed from the list\n");
+                return;
+            }
         }
     }
 
@@ -58,7 +59,7 @@ public class OrderList {
         for (Order order : orderList) {
             orderList.remove(order);
             orderHistoryList.add(order);
-            System.out.println("order " + order.getOrderID() + " has been saved in the order history\n");
+            System.out.println("order " + order.getOrderID() + " has been removed from the list and saved in the order history\n");
             break;
         }
     }
@@ -72,7 +73,7 @@ public class OrderList {
         return false;
     }
 
-    //metoden sorterer Order objekter i orderlisten. Ved at  et Order objekt til compareTo metoden, kan den sammenligne dem.
+    //metoden sorterer Order objekter i orderlisten. Ved at give et Order objekt til compareTo metoden, kan den sammenligne to Order objekter.
     public void sortOrders() {
         orderList.sort(Order::compareTo);
     }
