@@ -5,13 +5,6 @@ public class Pizza {
     private int pizzaNumber;
     private String topping;
 
-    //Pizza constructor til pizzaerne, der skal tilføjes til orderen
-    public Pizza(String name, int price, int pizzaNumber) {
-        this.name = name;
-        this.price = price;
-        this.pizzaNumber = pizzaNumber;
-    }
-
     //Pizza constructor til pizzaerne, der skal tilføjes til menukortet
     public Pizza(String name, int price, int pizzaNumber, String topping) {
         this.name = name;
