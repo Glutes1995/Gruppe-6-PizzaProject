@@ -33,6 +33,11 @@ public class PizzaMenu {
         return false;
     }
 
+    //getPizzaMenu er en metode der returnerer pizzaMenu arraylisten så man kan få listen af pizzaer på menukortet
+    public ArrayList<Pizza> getPizzaMenu(){
+        return pizzaMenu;
+    }
+
     //PizzaMenu toString override til at printe menukortet
     public String toString() {
         String pizzas = "PIZZA MENU\n";

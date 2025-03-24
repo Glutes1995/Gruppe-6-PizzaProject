@@ -27,6 +27,24 @@ public class Order {
         return deliveryTimeMinutes;
     }
 
+    //addPizza metoden tager den pizzamenuen som parametrer for at tilføje pizza'er fra den allerde etablerede menu
+    //og kopiere dem til vores ordrerliste
+    void addPizza(PizzaMenu menu, String pizzaName){
+        ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
+        for(Pizza p : pizzaMenu){
+            if(p.getName().equalsIgnoreCase(pizzaName)){
+                pizzaList.add(pizzaMenu.get(p.getPizzaNumber()-1));
+            }
+        }
+
+    }
+    //Begge addPizza metode kan bruges afhængigt af om man giver et navn eller nummer
+    //som input parametrer
+    void addPizza(PizzaMenu menu, int pizzaNumber){
+        ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
+        pizzaList.add(pizzaMenu.get(pizzaNumber-1));
+    }
+
     //metode til at beregne prisen på en ordre
     public int sumPizzaPrices() {
         int sum = 0;
@@ -44,5 +62,4 @@ public class Order {
         }
         return pizzas;
     }
-
 }
