@@ -17,6 +17,7 @@ public class OrderList {
 
     //denne metode kan tilføje et givent odre-objekt til ordre-listen
     void addOrder(PizzaMenu menu, Scanner scanner){
+
         Order order = new Order();
         System.out.println("Enter the name or number of a pizza or type done to end the order.");
         String userInput = scanner.nextLine();
@@ -34,8 +35,12 @@ public class OrderList {
             System.out.println("Enter the name or number of a pizza or type done to end the order.");
             userInput = scanner.nextLine();
         }
-
         orderList.add(order);
+    }
+
+    //metoden sorterer Order objekter i orderlisten. Ved at  et Order objekt til compareTo metoden, kan den sammenligne dem.
+    public void sortOrders() {
+        orderList.sort(Order::compareTo);
     }
 
     //OrderList toString override til at printe alle odre på ordre listen
