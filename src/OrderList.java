@@ -31,7 +31,7 @@ public class OrderList {
                 order.addPizza(menu, userInput);
             }
 
-            System.out.println("Enter the name or number of a pizza or type done to end the order.");
+            System.out.println("Indtast navnet eller nummer på pizzaen. Indtast done til at afslutte bestillingen.");
             userInput = scanner.nextLine();
         }
 
