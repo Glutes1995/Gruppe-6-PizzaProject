@@ -84,7 +84,7 @@ public class PizzaMenu {
 
     //changePrice er en metode, der lader brugeren ændre prisen på en given pizza
     public void changePrice(Scanner scanner) {
-        System.out.println("Hvilken pizza ønsker du at ændre pris på?");
+        System.out.println("Hvilken pizza ønsker du at ændre pris på?\n");
         String userChoice = scanner.nextLine();
 
         //gør det muligt at indtaste enten ID eller pizzanavn
@@ -93,7 +93,7 @@ public class PizzaMenu {
 
             //Tjekker om pizzaen er på menuen
             if (!isPizzaOnList(pizzaNumber)) {
-                System.out.println("Pizzaen kunne ikke findes");
+                System.out.println("Pizzaen kunne ikke findes\n");
                 return;
             }
 
@@ -103,6 +103,7 @@ public class PizzaMenu {
                     System.out.println("Prisen er nu " + pizza.getPrice() +
                             " Hvad kunne du godt tænke dig at ændre prisen til?");
                     int newPrice = scanner.nextInt();
+                    scanner.nextLine();
                     pizza.setPrice(newPrice);
                     System.out.println("Prisen er nu opdateret til " + newPrice);
                     return;
@@ -119,6 +120,7 @@ public class PizzaMenu {
                     System.out.println("Prisen er nu " + pizza.getPrice() +
                             " Hvad kunne du godt tænke dig at ændre prisen til?");
                     int newPrice = scanner.nextInt();
+                    scanner.nextLine();
                     pizza.setPrice(newPrice);
                     System.out.println("Prisen er nu opdateret til " + newPrice);
                     return;
