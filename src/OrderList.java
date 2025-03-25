@@ -18,7 +18,7 @@ public class OrderList {
     //denne metode kan tilføje et givent odre-objekt til ordre-listen
     void addOrder(PizzaMenu menu, Scanner scanner){
         Order order = new Order();
-        System.out.println("Enter the name or number of a pizza or type done to end the order.");
+        System.out.println("Indtast navnet eller nummer på pizzaen. Indtast done til at afslutte bestillingen.");
         String userInput = scanner.nextLine();
 
         //tilføjer pizzaer til odren indtil man skriver done
