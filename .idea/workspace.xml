@@ -4,10 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5891f41a-4426-4b07-8393-5fcb98093d14" name="Changes" comment="fjernede overflødig Pizza constructor">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,23 +49,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/glute/IdeaProjects/Gruppe-6-PizzaProject",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
@@ -249,7 +228,6 @@
       <option name="project" value="LOCAL" />
       <updated>1742547121653</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,14 +261,5 @@
     <MESSAGE value="oversat engelsk til dansk" />
     <MESSAGE value="tilføjet ekstra constructor til pizzaerne på menukortet" />
     <MESSAGE value="tilføjet kommentar" />
-    <MESSAGE value="tilføjet scanner som parameter i addOrder metoden og metoden er blevet testet" />
-    <MESSAGE value="tilføjer afhentningstidspunkt til addOrder metoden ved at lave en addOrderDeliveryTime metode" />
-    <MESSAGE value="tilføjet sort feature" />
-    <MESSAGE value="test af order afhentningstidspunkt virker" />
-    <MESSAGE value="Added Hello World so that main is working" />
-    <MESSAGE value="tilføjet save order feature" />
-    <MESSAGE value="testet save order/remove order feature" />
-    <MESSAGE value="fjernede overflødig Pizza constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="fjernede overflødig Pizza constructor" />
   </component>
 </project>
