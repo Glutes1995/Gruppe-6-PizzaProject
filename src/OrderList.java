@@ -38,7 +38,7 @@ public class OrderList {
                 }
             }
         }
-        System.out.println("Mest solgte pizza er: " + mostRepeatedName + " (" + maxCount + " solgte)");
+        System.out.println("Mest solgte pizza er: " + mostRepeatedName + " (" + maxCount + " solgte)\n");
     }
 
     //denne metode kan tilføje et givent odre-objekt til ordre-listen
