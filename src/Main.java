@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-      
+
         //Generelle variabler, instanser og objekter
 
-            //Pizzamenu objekt og instantiering af objekt
+        //Pizzamenu objekt og instantiering af objekt
         PizzaMenu pizzaMenu = new PizzaMenu();
         pizzaMenu.addPizzaMenu(pizzaMenu);
 
@@ -18,7 +18,7 @@ public class Main {
         //OrderList objekt laves
         OrderList orderList = new OrderList();
 
-        while(actionMenu){
+        while (actionMenu) {
             //Viser ordrehistorikken
             System.out.println(orderList);
 
@@ -29,8 +29,7 @@ public class Main {
             String actions = scanner.nextLine();
 
 
-
-            switch (actions){
+            switch (actions) {
                 case "1": //Viser pizza menu
                     pizzaMenu.getPizzaMenu();
                     System.out.println(pizzaMenu);
@@ -70,3 +69,7 @@ public class Main {
                 default: //Hvis brugeren indtaster ugyldigt valg
                     System.out.println("Indtast et gyldigt valg");
 
+            }
+        }
+    }
+}
