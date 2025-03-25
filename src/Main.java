@@ -31,7 +31,6 @@ public class Main {
 
             switch (actions) {
                 case "1": //Viser pizza menu
-                    pizzaMenu.getPizzaMenu();
                     System.out.println(pizzaMenu);
                     break;
 
