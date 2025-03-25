@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class PizzaMenu {
     //PizzaMenu instansvariabel
@@ -63,14 +64,69 @@ public class PizzaMenu {
     //metode til at checke om en pizza overhovedet er på menukortet
     public boolean isPizzaOnList(int pizzaNumber) {
         for (Pizza pizza : pizzaMenu) {
-            if ( pizzaNumber == pizza.getPizzaNumber()) return true;
+            if (pizzaNumber == pizza.getPizzaNumber()) return true;
+        }
+        return false;
+    }
+
+    //Overload af isPizzaOnList, som kan modtage string/pizza navn
+    public boolean isPizzaOnList(String name) {
+        for (Pizza pizza : pizzaMenu) {
+            if (name.equalsIgnoreCase(pizza.getName())) return true;
         }
         return false;
     }
 
     //getPizzaMenu er en metode der returnerer pizzaMenu arraylisten så man kan få listen af pizzaer på menukortet
-    public ArrayList<Pizza> getPizzaMenu(){
+    public ArrayList<Pizza> getPizzaMenu() {
         return pizzaMenu;
+    }
+
+    //changePrice er en metode, der lader brugeren ændre prisen på en given pizza
+    public void changePrice(Scanner scanner) {
+        System.out.println("Hvilken pizza ønsker du at ændre pris på?\n");
+        String userChoice = scanner.nextLine();
+
+        //gør det muligt at indtaste enten ID eller pizzanavn
+        try {
+            int pizzaNumber = Integer.parseInt(userChoice);
+
+            //Tjekker om pizzaen er på menuen
+            if (!isPizzaOnList(pizzaNumber)) {
+                System.out.println("Pizzaen kunne ikke findes\n");
+                return;
+            }
+
+            //Ændrer pris med ID
+            for (Pizza pizza : pizzaMenu) {
+                if (pizza.getPizzaNumber() == pizzaNumber) {
+                    System.out.println("Prisen er nu " + pizza.getPrice() +
+                            " Hvad kunne du godt tænke dig at ændre prisen til?");
+                    int newPrice = scanner.nextInt();
+                    scanner.nextLine();
+                    pizza.setPrice(newPrice);
+                    System.out.println("Prisen er nu opdateret til " + newPrice);
+                    return;
+                }
+            }
+        } catch (NumberFormatException e) {
+            if (!isPizzaOnList(userChoice)) {
+                System.out.println("Pizzaen kunne ikke findes");
+                return;
+            }
+            //Ændrer pris med pizzanavn
+            for (Pizza pizza : pizzaMenu) {
+                if (pizza.getName().equalsIgnoreCase(userChoice)) {
+                    System.out.println("Prisen er nu " + pizza.getPrice() +
+                            " Hvad kunne du godt tænke dig at ændre prisen til?");
+                    int newPrice = scanner.nextInt();
+                    scanner.nextLine();
+                    pizza.setPrice(newPrice);
+                    System.out.println("Prisen er nu opdateret til " + newPrice);
+                    return;
+                }
+            }
+        }
     }
 
     //PizzaMenu toString override til at printe menukortet

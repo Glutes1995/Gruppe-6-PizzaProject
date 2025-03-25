@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+      
         //Generelle variabler, instanser og objekter
 
             //Pizzamenu objekt og instantiering af objekt
@@ -59,15 +60,13 @@ public class Main {
                     //Tilføj metoden til at ændre prisen
                     break;
 
+
                 case "7": //Afslutter programmet
                     System.out.println("Programmet afsluttes");
                     actionMenu = false;
                     break;
 
+
                 default: //Hvis brugeren indtaster ugyldigt valg
                     System.out.println("Indtast et gyldigt valg");
 
-            }
-        }
-    }
-}
