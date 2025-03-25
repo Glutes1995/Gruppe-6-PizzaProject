@@ -15,6 +15,32 @@ public class OrderList {
         System.out.println("Dagens omsætning er: " + sum + ",-\n");
     }
 
+    //metode til at vise mest solgte pizza
+    public void mostSoldPizza(){
+        int maxCount = 0;
+        String mostRepeatedName = "";
+
+        for (Order orderI : orderHistoryList){
+            for (Pizza pizzaI : orderI.pizzaList){
+                String currentName = pizzaI.getName();
+                int count = 0;
+
+                for (Order orderN : orderHistoryList){
+                    for (Pizza pizzaN : orderN.pizzaList){
+                        if (pizzaN.getName().equals(currentName)){
+                            count++;
+                        }
+                    }
+                }
+                if (count > maxCount){
+                    maxCount = count;
+                    mostRepeatedName = currentName;
+                }
+            }
+        }
+        System.out.println("Mest solgte pizza er: " + mostRepeatedName + " (" + maxCount + " solgte)");
+    }
+
     //denne metode kan tilføje et givent odre-objekt til ordre-listen
     void addOrder(PizzaMenu menu, Scanner scanner) {
         Order order = new Order();

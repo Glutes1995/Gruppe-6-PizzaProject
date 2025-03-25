@@ -51,6 +51,7 @@ public class Main {
 
                 case "5": //Se dagens omsætning
                     orderList.orderRevenue();
+                    orderList.mostSoldPizza();
                     break;
 
                 case "6": //Ændre en pris på en pizza
