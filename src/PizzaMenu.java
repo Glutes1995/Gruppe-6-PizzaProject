@@ -6,7 +6,7 @@ public class PizzaMenu {
     private ArrayList<Pizza> pizzaMenu = new ArrayList<>();
 
     //Metoden tilføjer menukortet til et PizzaMenu objekt
-    public void addPizzaMenu(PizzaMenu pizzaMenu) {
+    public void addPizzaMenu() {
         this.addPizza("Margarita",49,1,"Tomato sauce, Cheese");
         this.addPizza("Hawaii", 55, 2,"Tomato sauce, Cheese, Ham, Pineapple");
         this.addPizza("Pep dress", 55, 3,"Tomato sauce, Cheese, Pepperoni, Dressing");

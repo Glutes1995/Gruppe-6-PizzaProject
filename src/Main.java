@@ -9,7 +9,7 @@ public class Main {
 
         //Pizzamenu objekt og instantiering af objekt
         PizzaMenu pizzaMenu = new PizzaMenu();
-        pizzaMenu.addPizzaMenu(pizzaMenu);
+        pizzaMenu.addPizzaMenu();
 
 
         Scanner scanner = new Scanner(System.in);
@@ -23,7 +23,7 @@ public class Main {
             System.out.println(orderList);
 
             //Viser handlingsmenuen
-            ActionMenu.visActions();
+            ActionMenu.showActions();
 
             //Læser brugerens input
             String actions = scanner.nextLine();
@@ -71,5 +71,6 @@ public class Main {
 
             }
         }
+        scanner.close();
     }
 }
