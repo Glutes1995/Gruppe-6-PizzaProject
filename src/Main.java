@@ -40,17 +40,25 @@ public class Main {
                     orderList.addOrder(pizzaMenu, scanner);
                     break;
 
-                case "3": //Ændre en pris på pizza
+                case "3": //afslut en ordre, flytter en ordre til ordrehistorikken
+                    System.out.println(orderList);
+                    orderList.saveOrder(scanner);
+                    break;
+
+                case "4": //Fjern en bestilling (Hvis Alfonso fatfinger en bestilling)
+                    orderList.removeOrder();
+                    break;
+
+                case "5": //Se dagens omsætning
+                    orderList.orderRevenue();
+                    break;
+
+                case "6": //Ændre en pris på en pizza
                     System.out.println(pizzaMenu);
                     //Tilføj metoden til at ændre prisen
-
                     break;
 
-                case "4": //Se dagens bestillinger og den mest solgte pizza
-
-                    break;
-
-                case "5": //Afslutter programmet
+                case "7": //Afslutter programmet
                     System.out.println("Programmet afsluttes");
                     actionMenu = false;
                     break;

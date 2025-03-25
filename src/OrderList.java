@@ -12,7 +12,7 @@ public class OrderList {
         for (Order order : orderHistoryList) {
             sum += order.sumPizzaPrices();
         }
-        System.out.println("Daily revenue: " + sum + ",-\n");
+        System.out.println("Dagens omsætning er: " + sum + ",-\n");
     }
 
     //denne metode kan tilføje et givent odre-objekt til ordre-listen
@@ -40,7 +40,7 @@ public class OrderList {
     }
 
     //metode til at fjerne en ordre fra ordrelisten
-    public void removeOrder(Scanner scanner) {
+    public void removeOrder() {
         System.out.println("Type in order id to remove");
         int orderID = scanner.nextInt();
         scanner.nextLine();
@@ -55,12 +55,18 @@ public class OrderList {
     }
 
     //metode til at rykke en færdig ordre over på ordrehistorikken
-    public void saveOrder() {
+    public void saveOrder(Scanner scanner) {
+        System.out.println("Skriv ordrenummer og ordren vil blive flyttet til ordrehistorikken'");
+        int orderID = scanner.nextInt();
+        scanner.nextLine();
+        if (!isOrderOnList(orderID)) return;
         for (Order order : orderList) {
-            orderList.remove(order);
-            orderHistoryList.add(order);
-            System.out.println("order " + order.getOrderID() + " has been removed from the list and saved in the order history\n");
-            break;
+            if (orderID == order.getOrderID()) {
+                orderList.remove(order);
+                orderHistoryList.add(order);
+                System.out.println("order " + order.getOrderID() + " er blevet fjernet og flyttet til ordrehistorikken\n");
+                break;
+            }
         }
     }
 
