@@ -4,10 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a75742c1-b32b-45b4-a50f-a15831e79d31" name="Changes" comment="Arbejder på menukortet">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PizzaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PizzaMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,22 +49,8 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;changePrice&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/glute/IdeaProjects/Gruppe-6-PizzaProject&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -110,53 +92,53 @@
       <workItem from="1742471354339" duration="1204000" />
       <workItem from="1742489975473" duration="5170000" />
     </task>
-    <task id="LOCAL-00001" summary="Adding java project to github repo">
+    <task id="LOCAL-00001" summary="tilføjer afhentningstidspunkt til addOrder metoden ved at lave en addOrderDeliveryTime metode">
       <option name="closed" value="true" />
-      <created>1742231915707</created>
+      <created>1742813085879</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1742231915707</updated>
+      <updated>1742813085879</updated>
     </task>
-    <task id="LOCAL-00002" summary="Added working main with hello world">
+    <task id="LOCAL-00002" summary="test af order afhentningstidspunkt virker">
       <option name="closed" value="true" />
-      <created>1742232203430</created>
+      <created>1742814247827</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1742232203430</updated>
+      <updated>1742814247827</updated>
     </task>
-    <task id="LOCAL-00003" summary="trying to merge master into main">
+    <task id="LOCAL-00003" summary="test af order afhentningstidspunkt virker">
       <option name="closed" value="true" />
-      <created>1742233106690</created>
+      <created>1742814607081</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1742233106690</updated>
+      <updated>1742814607081</updated>
     </task>
-    <task id="LOCAL-00004" summary="trying to merge master into main">
+    <task id="LOCAL-00004" summary="tilføjet save order feature">
       <option name="closed" value="true" />
-      <created>1742233325858</created>
+      <created>1742820083689</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1742233325858</updated>
+      <updated>1742820083689</updated>
     </task>
-    <task id="LOCAL-00005" summary="Added Hello World so that main is working">
+    <task id="LOCAL-00005" summary="testet save order/remove order feature">
       <option name="closed" value="true" />
-      <created>1742254576632</created>
+      <created>1742828688893</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1742254576632</updated>
+      <updated>1742828688893</updated>
     </task>
-    <task id="LOCAL-00006" summary="Added Hello World so that main is working">
+    <task id="LOCAL-00006" summary="fjernede overflødig Pizza constructor">
       <option name="closed" value="true" />
-      <created>1742255104451</created>
+      <created>1742829110175</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1742255104451</updated>
+      <updated>1742829110175</updated>
     </task>
     <task id="LOCAL-00007" summary="dev test">
       <option name="closed" value="true" />
@@ -269,7 +251,6 @@
     <MESSAGE value="Adding java project to github repo" />
     <MESSAGE value="Added working main with hello world" />
     <MESSAGE value="trying to merge master into main" />
-    <MESSAGE value="Added Hello World so that main is working" />
     <MESSAGE value="dev test" />
     <MESSAGE value="added Pizza class to test" />
     <MESSAGE value="added space" />
@@ -280,7 +261,5 @@
     <MESSAGE value="oversat engelsk til dansk" />
     <MESSAGE value="tilføjet ekstra constructor til pizzaerne på menukortet" />
     <MESSAGE value="tilføjet kommentar" />
-    <MESSAGE value="Arbejder på menukortet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arbejder på menukortet" />
   </component>
 </project>
