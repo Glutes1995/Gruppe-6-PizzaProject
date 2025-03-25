@@ -40,15 +40,15 @@ public class OrderList {
     }
 
     //metode til at fjerne en ordre fra ordrelisten
-    public void removeOrder() {
-        System.out.println("Type in order id to remove");
+    public void removeOrder(Scanner scanner) {
+        System.out.println("Skriv nummeret på ordren du ønsker at fjerne");
         int orderID = scanner.nextInt();
         scanner.nextLine();
         if (!isOrderOnList(orderID)) return;
         for (Order order : orderList) {
             if (orderID == order.getOrderID()) {
                 orderList.remove(order);
-                System.out.println("Order " + order.getOrderID() + " has been removed from the list\n");
+                System.out.println("Order " + order.getOrderID() + " er blevet fjernet fra listen\n");
                 return;
             }
         }

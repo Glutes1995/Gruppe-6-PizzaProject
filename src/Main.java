@@ -46,7 +46,7 @@ public class Main {
                     break;
 
                 case "4": //Fjern en bestilling (Hvis Alfonso fatfinger en bestilling)
-                    orderList.removeOrder();
+                    orderList.removeOrder(scanner);
                     break;
 
                 case "5": //Se dagens omsætning
