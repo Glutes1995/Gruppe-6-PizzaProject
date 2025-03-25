@@ -3,11 +3,11 @@ import java.util.Scanner;
 
 public class Order {
     //Order instansvariable
-    private ArrayList<Pizza> pizzaList = new ArrayList<>();
-    private static int orderIDCounter = 0;
-    private final int orderID;
-    private int deliveryTimeHours;
-    private int deliveryTimeMinutes;
+    protected ArrayList<Pizza> pizzaList = new ArrayList<>();
+    protected static int orderIDCounter = 0;
+    protected final int orderID;
+    protected int deliveryTimeHours;
+    protected int deliveryTimeMinutes;
 
     //Order constructor, der giver et nyoprettet Order objekt et unikt ID
     public Order() {
