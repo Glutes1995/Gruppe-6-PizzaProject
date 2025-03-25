@@ -100,7 +100,7 @@ public class OrderList {
 
     //metode til at rykke en færdig ordre over på ordrehistorikken
     public void saveOrder(Scanner scanner) {
-        System.out.println("Skriv ordrenummer og ordren vil blive flyttet til ordrehistorikken'");
+        System.out.println("Skriv ordrenummer og ordren vil blive flyttet til ordrehistorikken");
         int orderID = scanner.nextInt();
         scanner.nextLine();
         if (!isOrderOnList(orderID)) return;

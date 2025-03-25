@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d6d9efd-ad95-42fb-a9b0-f7054d5bd28b" name="Changes" comment="dev virker igen">
+    <list default="true" id="4d6d9efd-ad95-42fb-a9b0-f7054d5bd28b" name="Changes" comment="dev branch virker igen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ActionMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PizzaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PizzaMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,13 +172,13 @@
       <option name="project" value="LOCAL" />
       <updated>1742910877370</updated>
     </task>
-    <task id="LOCAL-00009" summary="added Pizza class to test">
+    <task id="LOCAL-00009" summary="dev branch virker igen">
       <option name="closed" value="true" />
-      <created>1742256872899</created>
+      <created>1742917871794</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1742256872899</updated>
+      <updated>1742917871794</updated>
     </task>
     <task id="LOCAL-00010" summary="added space">
       <option name="closed" value="true" />
@@ -245,7 +244,7 @@
       <option name="project" value="LOCAL" />
       <updated>1742547121653</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +285,7 @@
     <MESSAGE value="Fået lavet så UI så brugeren kan færdiggør en bestilling" />
     <MESSAGE value="Lavet en mest solgte pizza metode" />
     <MESSAGE value="dev virker igen" />
-    <option name="LAST_COMMIT_MESSAGE" value="dev virker igen" />
+    <MESSAGE value="dev branch virker igen" />
+    <option name="LAST_COMMIT_MESSAGE" value="dev branch virker igen" />
   </component>
 </project>
