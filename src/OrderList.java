@@ -15,31 +15,49 @@ public class OrderList {
         System.out.println("Dagens omsætning er: " + sum + ",-\n");
     }
 
-    //metode til at vise mest solgte pizza
-    public void mostSoldPizza(){
+    // Metode til at finde og vise den mest solgte pizza
+    public void mostSoldPizza() {
+
+        //Bruges til at gemme antal pizza solgt og sætte navnet på mest pizza solgt
         int maxCount = 0;
         String mostRepeatedName = "";
 
-        for (Order orderI : orderHistoryList){
-            for (Pizza pizzaI : orderI.pizzaList){
+        // Ydre loop: Går gennem hver ordre i ordrehistorikken
+        for (Order orderI : orderHistoryList) {
+
+            // Loop gennem alle pizzaer i den aktuelle ordre
+            for (Pizza pizzaI : orderI.pizzaList) {
+
+                // Tager bare navnet på en pizza og looper hver gang den kommer i loopet
+                // Gemmer hvor mange gange denne pizza optræder i hele ordrehistorikken
                 String currentName = pizzaI.getName();
                 int count = 0;
 
-                for (Order orderN : orderHistoryList){
-                    for (Pizza pizzaN : orderN.pizzaList){
-                        if (pizzaN.getName().equals(currentName)){
+                // Nyt loop som tæller pizzaerne
+                for (Order orderN : orderHistoryList) {
+
+                    // Loop gennem alle pizzaer i hver af disse ordrer
+                    for (Pizza pizzaN : orderN.pizzaList) {
+
+                        // Hvis navnet matcher den pizza vi tæller på, læg én til tælleren
+                        if (pizzaN.getName().equals(currentName)) {
                             count++;
                         }
                     }
                 }
-                if (count > maxCount){
+                //Gemmer pizzanavnet og antal solgte gange
+                // Hvis loopet har fundet en pizza der er solgt mere end en anden så -
+                // - opdaterer den både tælleren og navnet
+                if (count > maxCount) {
                     maxCount = count;
                     mostRepeatedName = currentName;
                 }
             }
         }
+        // Printer outputtet af loops
         System.out.println("Mest solgte pizza er: " + mostRepeatedName + " (" + maxCount + " solgte)\n");
     }
+
 
     //denne metode kan tilføje et givent odre-objekt til ordre-listen
     void addOrder(PizzaMenu menu, Scanner scanner) {
