@@ -1,0 +1,51 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import org.w3c.dom.ls.LSOutput;\r\n\r\nimport java.util.Scanner;\r\n\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n      \r\n        //Generelle variabler, instanser og objekter\r\n\r\n            //Pizzamenu objekt og instantiering af objekt\r\n        PizzaMenu pizzaMenu = new PizzaMenu();\r\n        pizzaMenu.addPizzaMenu(pizzaMenu);\r\n\r\n\r\n        Scanner scanner = new Scanner(System.in);\r\n        boolean actionMenu = true;\r\n\r\n        //OrderList objekt laves\r\n        OrderList orderList = new OrderList();\r\n\r\n        while(actionMenu){\r\n            //Viser ordrehistorikken\r\n            System.out.println(orderList);\r\n\r\n            //Viser handlingsmenuen\r\n            ActionMenu.visActions();\r\n\r\n            //Læser brugerens input\r\n            String actions = scanner.nextLine();\r\n\r\n\r\n\r\n            switch (actions){\r\n                case \"1\": //Viser pizza menu\r\n                    pizzaMenu.getPizzaMenu();\r\n                    System.out.println(pizzaMenu);\r\n                    break;\r\n\r\n                case \"2\": //Lav bestilling\r\n                    System.out.println(pizzaMenu);\r\n                    orderList.addOrder(pizzaMenu, scanner);\r\n                    break;\r\n\r\n                case \"3\": //afslut en ordre, flytter en ordre til ordrehistorikken\r\n                    System.out.println(orderList);\r\n                    orderList.saveOrder(scanner);\r\n                    break;\r\n\r\n                case \"4\": //Fjern en bestilling (Hvis Alfonso fatfinger en bestilling)\r\n                    orderList.removeOrder(scanner);\r\n                    break;\r\n\r\n                case \"5\": //Se dagens omsætning\r\n                    orderList.orderRevenue();\r\n                    orderList.mostSoldPizza();\r\n                    break;\r\n\r\n                case \"6\": //Ændre en pris på en pizza\r\n                    System.out.println(pizzaMenu);\r\n                    //Tilføj metoden til at ændre prisen\r\n                    break;\r\n\r\n\r\n                case \"7\": //Afslutter programmet\r\n                    System.out.println(\"Programmet afsluttes\");\r\n                    actionMenu = false;\r\n                    break;\r\n\r\n\r\n                default: //Hvis brugeren indtaster ugyldigt valg\r\n                    System.out.println(\"Indtast et gyldigt valg\");\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision 46a91afce0e5aa4bddfdd491bf0aafe3912ac5fb)
++++ b/src/Main.java	(date 1742913528767)
+@@ -4,10 +4,10 @@
+ 
+ public class Main {
+     public static void main(String[] args) {
+-      
++
+         //Generelle variabler, instanser og objekter
+ 
+-            //Pizzamenu objekt og instantiering af objekt
++        //Pizzamenu objekt og instantiering af objekt
+         PizzaMenu pizzaMenu = new PizzaMenu();
+         pizzaMenu.addPizzaMenu(pizzaMenu);
+ 
+@@ -18,7 +18,7 @@
+         //OrderList objekt laves
+         OrderList orderList = new OrderList();
+ 
+-        while(actionMenu){
++        while (actionMenu) {
+             //Viser ordrehistorikken
+             System.out.println(orderList);
+ 
+@@ -29,8 +29,7 @@
+             String actions = scanner.nextLine();
+ 
+ 
+-
+-            switch (actions){
++            switch (actions) {
+                 case "1": //Viser pizza menu
+                     pizzaMenu.getPizzaMenu();
+                     System.out.println(pizzaMenu);
+@@ -70,3 +69,7 @@
+                 default: //Hvis brugeren indtaster ugyldigt valg
+                     System.out.println("Indtast et gyldigt valg");
+ 
++            }
++        }
++    }
++}
+\ No newline at end of file

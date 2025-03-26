@@ -1,0 +1,82 @@
+Index: src/Main2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main2.java b/src/Main2.java
+new file mode 100644
+--- /dev/null	(date 1742808893286)
++++ b/src/Main2.java	(date 1742808893286)
+@@ -0,0 +1,49 @@
++import java.util.Scanner;
++
++public class Main2 {
++    public static void main(String[] args) {
++        boolean actions = true; //Boolean til at styre menuen
++        Scanner scanner = new Scanner(System.in);
++        OrderList orderlist = new OrderList();
++
++
++        while (actions){
++            //Viser orderhistorikken
++            System.out.println(orderlist);
++
++            //Viser handlingsmenuen
++            ActionMenu.visActions();
++
++            //Læser brugerens input
++            String actionMenu = scanner.nextLine();
++
++            switch (actionMenu){
++                case "1": //Viser pizzamenuen
++                    //tilføj vis pizza metode
++                    break;
++
++                case "2": // Laver en ordrer
++                    //Tilføj en lav ordrer metode
++                    break;
++
++                case "3": //
++                    //Tilføj ændre pris metode på pizza, brug August kode så String og Int kan anvendes
++                    System.out.println("");
++                    break;
++
++                case "4": //Tilføj omsætning + mest solgte pizzaer
++
++                    break;
++
++                case "5": //
++                    System.out.println("Programmet afsluttes");
++                    actions = false;
++                    break;
++
++                default: // Hvis man indtaster et ugyldigt valg
++                    System.out.println("Ugyldigt valg! Tast et gyldigt valg");
++
++            }
++        }
++    }
++}
+\ No newline at end of file
+Index: src/ActionMenu.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ActionMenu.java b/src/ActionMenu.java
+new file mode 100644
+--- /dev/null	(date 1742808893276)
++++ b/src/ActionMenu.java	(date 1742808893276)
+@@ -0,0 +1,12 @@
++public class ActionMenu {
++
++    //Metode til at vise handlinger
++    public static void visActions() {
++        System.out.println("Hvad vil du foretage dig?");
++        System.out.println("1 - Se menukortet");
++        System.out.println("2 - Lav en bestilling");
++        System.out.println("3 - Ændre pris på pizza");
++        System.out.println("4 - Se dagens bestillinger");
++        System.out.println("5 - Afslut programmet");
++    }
++}

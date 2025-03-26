@@ -1,0 +1,107 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.Scanner;\r\n\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n        System.out.println(\"Test features manuelt her inde\\n\");\r\n        //For eksempel har jeg testet ting, der skal vise noget\r\n        //Man kan bare slette hvad end der er her i main og teste det man nu skal have testet\"\r\n\r\n        PizzaMenu pizzaMenu = new PizzaMenu();\r\n        Scanner scanner = new Scanner(System.in);\r\n\r\n        pizzaMenu.addPizza(\"Margarita\",49,1,\"Tomato sauce, Cheese\");\r\n        System.out.println(pizzaMenu);\r\n\r\n        pizzaMenu.removePizza(1);\r\n        System.out.println(pizzaMenu);\r\n\r\n        Pizza pizza = new Pizza(\"Meat lover\", 69, 2);\r\n        System.out.println(pizza);\r\n\r\n        //Test OrderList og Order klasserne\r\n        pizzaMenu.addPizza(\"Margarita\",49,1,\"Tomato sauce, Cheese\");\r\n        System.out.println(pizzaMenu);\r\n\r\n        OrderList orderList = new OrderList();\r\n\r\n        orderList.addOrder(pizzaMenu, scanner);\r\n        System.out.println(\"OrderList1: \");\r\n        System.out.println(orderList);\r\n\r\n        orderList.addOrder(pizzaMenu, scanner);\r\n        System.out.println(\"OrderList2: \");\r\n        System.out.println(orderList);\r\n\r\n        orderList.addOrder(pizzaMenu, scanner);\r\n        System.out.println(\"OrderList3: \");\r\n        System.out.println(orderList);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision 386a2936a01ca4addafbb4c032e588da30415ecf)
++++ b/src/Main.java	(date 1742809871097)
+@@ -8,8 +8,9 @@
+ 
+         PizzaMenu pizzaMenu = new PizzaMenu();
+         Scanner scanner = new Scanner(System.in);
++        boolean actions = true;
+ 
+-        pizzaMenu.addPizza("Margarita",49,1,"Tomato sauce, Cheese");
++        pizzaMenu.addPizza("Margarita", 49, 1, "Tomato sauce, Cheese");
+         System.out.println(pizzaMenu);
+ 
+         pizzaMenu.removePizza(1);
+@@ -19,21 +20,52 @@
+         System.out.println(pizza);
+ 
+         //Test OrderList og Order klasserne
+-        pizzaMenu.addPizza("Margarita",49,1,"Tomato sauce, Cheese");
++        pizzaMenu.addPizza("Margarita", 49, 1, "Tomato sauce, Cheese");
+         System.out.println(pizzaMenu);
+ 
+         OrderList orderList = new OrderList();
+ 
+-        orderList.addOrder(pizzaMenu, scanner);
+-        System.out.println("OrderList1: ");
+-        System.out.println(orderList);
++        //While loop til at se handlinger
++        while (actions) {
++            //Viser orderhistorikken
++            System.out.println(orderList);
+ 
+-        orderList.addOrder(pizzaMenu, scanner);
+-        System.out.println("OrderList2: ");
+-        System.out.println(orderList);
++            //Viser handlingsmenuen
++            ActionMenu.visActions();
++
++            //Læser brugerens input
++            String actionMenu = scanner.nextLine();
++
++            switch (actionMenu) {
++                case "1": //Viser pizzamenuen
++                    //tilføj vis pizza metode
++                    System.out.println(pizzaMenu);
++                    break;
++
++                case "2": // Laver en ordrer
++                    //Tilføj en lav ordrer metode
++                    orderList.addOrder(pizzaMenu, scanner);
++
++                    break;
++
++                case "3": //
++                    //Tilføj ændre pris metode på pizza, brug August kode så String og Int kan anvendes
++                    System.out.println("");
++                    break;
++
++                case "4": //Tilføj omsætning + mest solgte pizzaer
++
++                    break;
+ 
+-        orderList.addOrder(pizzaMenu, scanner);
+-        System.out.println("OrderList3: ");
+-        System.out.println(orderList);
++                case "5": //
++                    System.out.println("Programmet afsluttes");
++                    actions = false;
++                    break;
++
++                default: // Hvis man indtaster et ugyldigt valg
++                    System.out.println("Ugyldigt valg! Tast et gyldigt valg");
++
++            }
++        }
+     }
+ }
+\ No newline at end of file
+Index: src/ActionMenu.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ActionMenu.java b/src/ActionMenu.java
+new file mode 100644
+--- /dev/null	(date 1742808963783)
++++ b/src/ActionMenu.java	(date 1742808963783)
+@@ -0,0 +1,12 @@
++public class ActionMenu {
++
++    //Metode til at vise handlinger
++    public static void visActions() {
++        System.out.println("Hvad vil du foretage dig?");
++        System.out.println("1 - Se menukortet");
++        System.out.println("2 - Lav en bestilling");
++        System.out.println("3 - Ændre pris på pizza");
++        System.out.println("4 - Se dagens bestillinger");
++        System.out.println("5 - Afslut programmet");
++    }
++}
