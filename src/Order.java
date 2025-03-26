@@ -28,7 +28,7 @@ public class Order {
         return deliveryTimeMinutes;
     }
 
-    void addOrderDeliveryTime(Scanner scanner){
+    void addOrderDeliveryTime(Scanner scanner) {
         String input;
 
         System.out.println("Skriv leverings tid som 00:00 timer:minutter");
@@ -41,14 +41,14 @@ public class Order {
 
     //addPizza metoden tager den pizzamenuen som parametrer for at tilføje pizza'er fra den allerde etablerede menu
     //og kopiere dem til vores ordrerliste
-    void addPizza(PizzaMenu menu, String pizzaName){
+    void addPizza(PizzaMenu menu, String pizzaName) {
         try {
             ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
             Pizza newPizza;
 
-            for(Pizza p : pizzaMenu){
-                if(p.getName().equalsIgnoreCase(pizzaName)){
-                    newPizza = pizzaMenu.get(p.getPizzaNumber()-1);
+            for (Pizza p : pizzaMenu) {
+                if (p.getName().equalsIgnoreCase(pizzaName)) {
+                    newPizza = pizzaMenu.get(p.getPizzaNumber() - 1);
                     pizzaList.add(newPizza);
                     break;
                 }
@@ -61,14 +61,13 @@ public class Order {
 
     //Begge addPizza metode kan bruges afhængigt af om man giver et navn eller nummer
     //som input parametrer
-    void addPizza(PizzaMenu menu, int pizzaNumber){
+    void addPizza(PizzaMenu menu, int pizzaNumber) {
         try {
             ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
             Pizza newPizza = new Pizza(pizzaMenu.get(pizzaNumber - 1));
 
             pizzaList.add(newPizza);
-        }
-        catch (IndexOutOfBoundsException e){
+        } catch (IndexOutOfBoundsException e) {
             System.out.println("Ugyldigt valg");
         }
     }
@@ -93,7 +92,17 @@ public class Order {
     //Order toString override til at printe alle pizzaer på en ordre og dens ID/nummer, samt afhentningstidspunkt
     public String toString() {
         String pizzas;
-        if (deliveryTimeMinutes == 0) {
+        if (deliveryTimeMinutes == 0 && deliveryTimeHours == 0) {
+            pizzas = "Order " + orderID + " for " + deliveryTimeHours + "0:" + deliveryTimeMinutes + "0\n";
+            for (Pizza pizza : pizzaList) {
+                pizzas += pizza + "\n";
+            }
+        } else if (deliveryTimeHours == 0) {
+            pizzas = "Order " + orderID + " for " + deliveryTimeHours + "0:" + deliveryTimeMinutes + "\n";
+            for (Pizza pizza : pizzaList) {
+                pizzas += pizza + "\n";
+            }
+        } else if (deliveryTimeMinutes == 0) {
             pizzas = "Order " + orderID + " for " + deliveryTimeHours + ":" + deliveryTimeMinutes + "0\n";
             for (Pizza pizza : pizzaList) {
                 pizzas += pizza + "\n";

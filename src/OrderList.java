@@ -76,7 +76,7 @@ public class OrderList {
         } else {
             order.addOrderDeliveryTime(scanner);
             orderList.add(order);
-            this.sortOrders();
+            sortOrders();
         }
     }
 
