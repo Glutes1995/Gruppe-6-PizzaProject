@@ -33,7 +33,6 @@ public class Main {
                     break;
 
                 case "2": //Lav bestilling
-                    System.out.println(pizzaMenu);
                     orderList.addOrder(pizzaMenu, scanner);
                     break;
 
@@ -52,7 +51,6 @@ public class Main {
                     break;
 
                 case "6": //Ændre en pris på en pizza
-                    System.out.println(pizzaMenu);
                     pizzaMenu.changePrice(scanner);
                     break;
 
