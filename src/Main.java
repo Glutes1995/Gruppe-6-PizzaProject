@@ -1,6 +1,28 @@
 import java.util.Scanner;
 
 public class Main {
+
+
+    void testMetode(){
+        System.out.println("v4");
+        System.out.println("v5");
+        System.out.println("v6");System.out.println("v4");
+        System.out.println("v5");
+        System.out.println("v6");System.out.println("v4");
+        System.out.println("v5");
+        System.out.println("v6");System.out.println("v4");
+        System.out.println("v5");
+        System.out.println("v6");System.out.println("v4");
+        System.out.println("v5");
+        System.out.println("v6");System.out.println("v4");
+        System.out.println("v5");
+        System.out.println("v6");System.out.println("v4");
+        System.out.println("v5");
+        System.out.println("v6");System.out.println("v4");
+        System.out.println("v5");
+        System.out.println("v6");
+    }
+
     public static void main(String[] args) {
 
         //Generelle variabler, instanser og objekter
