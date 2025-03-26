@@ -9,6 +9,7 @@ public class Main {
         PizzaMenu pizzaMenu = new PizzaMenu();
         pizzaMenu.addPizzaMenu();
         System.out.println("v1");
+        System.out.println("v2");
 
         Scanner scanner = new Scanner(System.in);
         boolean actionMenu = true;
