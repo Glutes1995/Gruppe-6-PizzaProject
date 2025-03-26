@@ -31,7 +31,7 @@ public class Order {
     void addOrderDeliveryTime(Scanner scanner){
         String input;
 
-        System.out.println("Write your delivery time as 00:00 hours:minutes");
+        System.out.println("Skriv leverings tid som 00:00 timer:minutter");
         input = scanner.nextLine();
 
         String[] timeSplit = input.split(":");
@@ -42,19 +42,29 @@ public class Order {
     //addPizza metoden tager den pizzamenuen som parametrer for at tilføje pizza'er fra den allerde etablerede menu
     //og kopiere dem til vores ordrerliste
     void addPizza(PizzaMenu menu, String pizzaName){
-        ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
-        for(Pizza p : pizzaMenu){
-            if(p.getName().equalsIgnoreCase(pizzaName)){
-                pizzaList.add(pizzaMenu.get(p.getPizzaNumber()-1));
+            try {
+                ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
+                for(Pizza p : pizzaMenu){
+                    if(p.getName().equalsIgnoreCase(pizzaName)){
+                        pizzaList.add(pizzaMenu.get(p.getPizzaNumber()-1));
+                    }
+                }
+            } catch (IndexOutOfBoundsException e) {
+                System.out.println("Ugyldigt valg");
             }
-        }
-
     }
+
+
     //Begge addPizza metode kan bruges afhængigt af om man giver et navn eller nummer
     //som input parametrer
     void addPizza(PizzaMenu menu, int pizzaNumber){
-        ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
-        pizzaList.add(pizzaMenu.get(pizzaNumber-1));
+        try {
+            ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
+            pizzaList.add(pizzaMenu.get(pizzaNumber - 1));
+        }
+        catch (IndexOutOfBoundsException e){
+            System.out.println("Ugyldigt valg");
+        }
     }
 
     //metode til at beregne prisen på en ordre
