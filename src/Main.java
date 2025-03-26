@@ -29,7 +29,6 @@ public class Main {
 
             switch (actions) {
                 case "1": //Viser pizza menu
-                    pizzaMenu.getPizzaMenu();
                     System.out.println(pizzaMenu);
                     break;
 
@@ -65,7 +64,7 @@ public class Main {
 
 
                 default: //Hvis brugeren indtaster ugyldigt valg
-                    System.out.println("Indtast et gyldigt valg");
+                    System.out.println("Indtast et tal fra 1-7");
 
             }
         }
