@@ -105,7 +105,7 @@ public class PizzaMenu {
                     int newPrice = scanner.nextInt();
                     scanner.nextLine();
                     pizza.setPrice(newPrice);
-                    System.out.println("Prisen er nu opdateret til " + newPrice);
+                    System.out.println("Prisen er nu opdateret til " + newPrice + ",.");
                     return;
                 }
             }
