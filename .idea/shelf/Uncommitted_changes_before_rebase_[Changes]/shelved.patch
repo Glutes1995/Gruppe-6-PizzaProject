@@ -1,0 +1,334 @@
+Index: src/ActionMenu.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ActionMenu.java b/src/ActionMenu.java
+new file mode 100644
+--- /dev/null	(date 1742808553175)
++++ b/src/ActionMenu.java	(date 1742808553175)
+@@ -0,0 +1,12 @@
++public class ActionMenu {
++
++    //Metode til at vise handlinger
++    public static void visActions() {
++        System.out.println("Hvad vil du foretage dig?");
++        System.out.println("1 - Se menukortet");
++        System.out.println("2 - Lav en bestilling");
++        System.out.println("3 - Ændre pris på pizza");
++        System.out.println("4 - Se dagens bestillinger");
++        System.out.println("5 - Afslut programmet");
++    }
++}
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Main {\r\n    public static void main(String[] args) {\r\n        System.out.println(\"Test features manuelt her inde\\n\");\r\n        //For eksempel har jeg testet ting, der skal vise noget\r\n        //Man kan bare slette hvad end der er her i main og teste det man nu skal have testet\"\r\n\r\n        PizzaMenu pizzaMenu = new PizzaMenu();\r\n\r\n        pizzaMenu.addPizza(\"Margarita\",49,1,\"Tomato sauce, Cheese\");\r\n        System.out.println(pizzaMenu);\r\n\r\n        pizzaMenu.removePizza(1);\r\n        System.out.println(pizzaMenu);\r\n\r\n        Pizza pizza = new Pizza(\"Meat lover\", 69, 2);\r\n        System.out.println(pizza);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision a1fbdc2dcfdf34a5c2c1f2475bc5d22db5c43a28)
++++ b/src/Main.java	(date 1742808494611)
+@@ -1,18 +1,49 @@
++import java.util.Scanner;
++
+ public class Main {
+     public static void main(String[] args) {
+-        System.out.println("Test features manuelt her inde\n");
+-        //For eksempel har jeg testet ting, der skal vise noget
+-        //Man kan bare slette hvad end der er her i main og teste det man nu skal have testet"
++        boolean actions = true; //Boolean til at styre menuen
++        Scanner scanner = new Scanner(System.in);
++        OrderList orderlist = new OrderList();
++
++
++        while (actions){
++        //Viser orderhistorikken
++        System.out.println(orderlist);
++
++        //Viser handlingsmenuen
++        ActionMenu.visActions();
++
++        //Læser brugerens input
++        String actionMenu = scanner.nextLine();
++
++        switch (actionMenu){
++            case "1": //Viser pizzamenuen
++                //tilføj vis pizza metode
++                break;
++
++            case "2": // Laver en ordrer
++                //Tilføj en lav ordrer metode
++                break;
++
++            case "3": //
++                //Tilføj ændre pris metode på pizza, brug August kode så String og Int kan anvendes
++                System.out.println("");
++                break;
+ 
+-        PizzaMenu pizzaMenu = new PizzaMenu();
++            case "4": //Tilføj omsætning + mest solgte pizzaer
+ 
+-        pizzaMenu.addPizza("Margarita",49,1,"Tomato sauce, Cheese");
+-        System.out.println(pizzaMenu);
++                break;
+ 
+-        pizzaMenu.removePizza(1);
+-        System.out.println(pizzaMenu);
++            case "5": //
++                System.out.println("Programmet afsluttes");
++                actions = false;
++                break;
+ 
+-        Pizza pizza = new Pizza("Meat lover", 69, 2);
+-        System.out.println(pizza);
++            default: // Hvis man indtaster et ugyldigt valg
++                System.out.println("Ugyldigt valg! Tast et gyldigt valg");
++
++            }
++        }
+     }
+ }
+\ No newline at end of file
+Index: src/Main2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main2.java b/src/Main2.java
+new file mode 100644
+--- /dev/null	(date 1742808872805)
++++ b/src/Main2.java	(date 1742808872805)
+@@ -0,0 +1,49 @@
++import java.util.Scanner;
++
++public class Main2 {
++    public static void main(String[] args) {
++        boolean actions = true; //Boolean til at styre menuen
++        Scanner scanner = new Scanner(System.in);
++        OrderList orderlist = new OrderList();
++
++
++        while (actions){
++            //Viser orderhistorikken
++            System.out.println(orderlist);
++
++            //Viser handlingsmenuen
++            ActionMenu.visActions();
++
++            //Læser brugerens input
++            String actionMenu = scanner.nextLine();
++
++            switch (actionMenu){
++                case "1": //Viser pizzamenuen
++                    //tilføj vis pizza metode
++                    break;
++
++                case "2": // Laver en ordrer
++                    //Tilføj en lav ordrer metode
++                    break;
++
++                case "3": //
++                    //Tilføj ændre pris metode på pizza, brug August kode så String og Int kan anvendes
++                    System.out.println("");
++                    break;
++
++                case "4": //Tilføj omsætning + mest solgte pizzaer
++
++                    break;
++
++                case "5": //
++                    System.out.println("Programmet afsluttes");
++                    actions = false;
++                    break;
++
++                default: // Hvis man indtaster et ugyldigt valg
++                    System.out.println("Ugyldigt valg! Tast et gyldigt valg");
++
++            }
++        }
++    }
++}
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b7c54e80-2297-4f98-b178-2c97ea6b3336\" name=\"Changes\" comment=\"tilføjet kommentar\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"dev\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;Glutes1995&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/Glutes1995/Gruppe-6-PizzaProject.git&quot;,\r\n    &quot;accountId&quot;: &quot;99a8a99a-fb9b-4281-b99f-c95e53270040&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 0\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2uSAzyFWIn4VLrn5ESFkHsPhUUe\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.Main.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;viseLister&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/glute/IdeaProjects/Gruppe-6-PizzaProject&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.153\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.153\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"b7c54e80-2297-4f98-b178-2c97ea6b3336\" name=\"Changes\" comment=\"\" />\r\n      <created>1742231871528</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1742231871528</updated>\r\n      <workItem from=\"1742231872913\" duration=\"1461000\" />\r\n      <workItem from=\"1742238977469\" duration=\"554000\" />\r\n      <workItem from=\"1742239578260\" duration=\"16000\" />\r\n      <workItem from=\"1742253724105\" duration=\"693000\" />\r\n      <workItem from=\"1742254508463\" duration=\"3426000\" />\r\n      <workItem from=\"1742319178870\" duration=\"2460000\" />\r\n      <workItem from=\"1742327867490\" duration=\"320000\" />\r\n      <workItem from=\"1742328275963\" duration=\"5000\" />\r\n      <workItem from=\"1742381699204\" duration=\"793000\" />\r\n      <workItem from=\"1742393027990\" duration=\"975000\" />\r\n      <workItem from=\"1742398134528\" duration=\"1244000\" />\r\n      <workItem from=\"1742471354339\" duration=\"1204000\" />\r\n      <workItem from=\"1742489975473\" duration=\"5170000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Adding java project to github repo\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742231915707</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742231915707</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Added working main with hello world\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742232203430</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742232203430</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"trying to merge master into main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742233106690</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742233106690</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"trying to merge master into main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742233325858</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742233325858</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Added Hello World so that main is working\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742254576632</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742254576632</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Added Hello World so that main is working\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742255104451</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742255104451</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"dev test\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742255473904</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742255473904</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"added Pizza class to test\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742256773690</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742256773690</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"added Pizza class to test\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742256872899</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742256872899</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"added space\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742257059467</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742257059467</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Tilføjet mit github user name\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742300648434</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742300648434</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"slettede overloading constructor\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742328075711</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742328075711</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"tilføjet kode kommentarer til dev\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742486787117</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742486787117</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"tilføjet add/remove/pizza check til Menuen&#10;tilføjet kode kommentarer&#10;tilføjet toString metoder&#10;tilføjet omsætnings beregner\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742491508899</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742491508899</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"oversat engelsk til dansk\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742509544180</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742509544180</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"tilføjet ekstra constructor til pizzaerne på menukortet\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742546934455</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742546934455</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"tilføjet kommentar\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742547121653</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742547121653</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"18\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"UnknownFeatures\">\r\n    <option featureType=\"com.intellij.fileTypeFactory\" implementationName=\"*.name\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Adding java project to github repo\" />\r\n    <MESSAGE value=\"Added working main with hello world\" />\r\n    <MESSAGE value=\"trying to merge master into main\" />\r\n    <MESSAGE value=\"Added Hello World so that main is working\" />\r\n    <MESSAGE value=\"dev test\" />\r\n    <MESSAGE value=\"added Pizza class to test\" />\r\n    <MESSAGE value=\"added space\" />\r\n    <MESSAGE value=\"Tilføjet mit github user name\" />\r\n    <MESSAGE value=\"slettede overloading constructor\" />\r\n    <MESSAGE value=\"tilføjet kode kommentarer til dev\" />\r\n    <MESSAGE value=\"tilføjet add/remove/pizza check til Menuen&#10;tilføjet kode kommentarer&#10;tilføjet toString metoder&#10;tilføjet omsætnings beregner\" />\r\n    <MESSAGE value=\"oversat engelsk til dansk\" />\r\n    <MESSAGE value=\"tilføjet ekstra constructor til pizzaerne på menukortet\" />\r\n    <MESSAGE value=\"tilføjet kommentar\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"tilføjet kommentar\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision a1fbdc2dcfdf34a5c2c1f2475bc5d22db5c43a28)
++++ b/.idea/workspace.xml	(date 1742805838664)
+@@ -4,7 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b7c54e80-2297-4f98-b178-2c97ea6b3336" name="Changes" comment="tilføjet kommentar" />
++    <list default="true" id="b7c54e80-2297-4f98-b178-2c97ea6b3336" name="Changes" comment="Tilføjet mit github user name">
++      <change afterPath="$PROJECT_DIR$/src/ActionMenu.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -34,12 +38,9 @@
+   <component name="GithubPullRequestsUISettings">{
+   &quot;selectedUrlAndAccountId&quot;: {
+     &quot;url&quot;: &quot;https://github.com/Glutes1995/Gruppe-6-PizzaProject.git&quot;,
+-    &quot;accountId&quot;: &quot;99a8a99a-fb9b-4281-b99f-c95e53270040&quot;
++    &quot;accountId&quot;: &quot;40cb2285-e077-4273-95e8-06fe28e565df&quot;
+   }
+ }</component>
+-  <component name="ProblemsViewState">
+-    <option name="selectedTabId" value="CurrentFile" />
+-  </component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 0
+ }</component>
+@@ -49,22 +50,23 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;viseLister&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/glute/IdeaProjects/Gruppe-6-PizzaProject&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Application.Main.executor": "Run",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "git-widget-placeholder": "ActionMenu",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "C:/Users/glute/IdeaProjects/Gruppe-6-PizzaProject",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "settings.editor.selected.configurable": "preferences.pluginManager",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RunManager">
+     <configuration default="true" type="JetRunConfigurationType">
+       <method v="2">
+@@ -97,14 +99,6 @@
+       <workItem from="1742239578260" duration="16000" />
+       <workItem from="1742253724105" duration="693000" />
+       <workItem from="1742254508463" duration="3426000" />
+-      <workItem from="1742319178870" duration="2460000" />
+-      <workItem from="1742327867490" duration="320000" />
+-      <workItem from="1742328275963" duration="5000" />
+-      <workItem from="1742381699204" duration="793000" />
+-      <workItem from="1742393027990" duration="975000" />
+-      <workItem from="1742398134528" duration="1244000" />
+-      <workItem from="1742471354339" duration="1204000" />
+-      <workItem from="1742489975473" duration="5170000" />
+     </task>
+     <task id="LOCAL-00001" summary="Adding java project to github repo">
+       <option name="closed" value="true" />
+@@ -194,55 +188,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1742300648434</updated>
+     </task>
+-    <task id="LOCAL-00012" summary="slettede overloading constructor">
+-      <option name="closed" value="true" />
+-      <created>1742328075711</created>
+-      <option name="number" value="00012" />
+-      <option name="presentableId" value="LOCAL-00012" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1742328075711</updated>
+-    </task>
+-    <task id="LOCAL-00013" summary="tilføjet kode kommentarer til dev">
+-      <option name="closed" value="true" />
+-      <created>1742486787117</created>
+-      <option name="number" value="00013" />
+-      <option name="presentableId" value="LOCAL-00013" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1742486787117</updated>
+-    </task>
+-    <task id="LOCAL-00014" summary="tilføjet add/remove/pizza check til Menuen&#10;tilføjet kode kommentarer&#10;tilføjet toString metoder&#10;tilføjet omsætnings beregner">
+-      <option name="closed" value="true" />
+-      <created>1742491508899</created>
+-      <option name="number" value="00014" />
+-      <option name="presentableId" value="LOCAL-00014" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1742491508899</updated>
+-    </task>
+-    <task id="LOCAL-00015" summary="oversat engelsk til dansk">
+-      <option name="closed" value="true" />
+-      <created>1742509544180</created>
+-      <option name="number" value="00015" />
+-      <option name="presentableId" value="LOCAL-00015" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1742509544180</updated>
+-    </task>
+-    <task id="LOCAL-00016" summary="tilføjet ekstra constructor til pizzaerne på menukortet">
+-      <option name="closed" value="true" />
+-      <created>1742546934455</created>
+-      <option name="number" value="00016" />
+-      <option name="presentableId" value="LOCAL-00016" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1742546934455</updated>
+-    </task>
+-    <task id="LOCAL-00017" summary="tilføjet kommentar">
+-      <option name="closed" value="true" />
+-      <created>1742547121653</created>
+-      <option name="number" value="00017" />
+-      <option name="presentableId" value="LOCAL-00017" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1742547121653</updated>
+-    </task>
+-    <option name="localTasksCounter" value="18" />
++    <option name="localTasksCounter" value="12" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -250,17 +196,6 @@
+   </component>
+   <component name="UnknownFeatures">
+     <option featureType="com.intellij.fileTypeFactory" implementationName="*.name" />
+-  </component>
+-  <component name="Vcs.Log.Tabs.Properties">
+-    <option name="TAB_STATES">
+-      <map>
+-        <entry key="MAIN">
+-          <value>
+-            <State />
+-          </value>
+-        </entry>
+-      </map>
+-    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Adding java project to github repo" />
+@@ -271,12 +206,6 @@
+     <MESSAGE value="added Pizza class to test" />
+     <MESSAGE value="added space" />
+     <MESSAGE value="Tilføjet mit github user name" />
+-    <MESSAGE value="slettede overloading constructor" />
+-    <MESSAGE value="tilføjet kode kommentarer til dev" />
+-    <MESSAGE value="tilføjet add/remove/pizza check til Menuen&#10;tilføjet kode kommentarer&#10;tilføjet toString metoder&#10;tilføjet omsætnings beregner" />
+-    <MESSAGE value="oversat engelsk til dansk" />
+-    <MESSAGE value="tilføjet ekstra constructor til pizzaerne på menukortet" />
+-    <MESSAGE value="tilføjet kommentar" />
+-    <option name="LAST_COMMIT_MESSAGE" value="tilføjet kommentar" />
++    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet mit github user name" />
+   </component>
+ </project>
+\ No newline at end of file
