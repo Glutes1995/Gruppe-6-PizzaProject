@@ -9,20 +9,27 @@ public class Main {
         System.out.println("v6");System.out.println("v4");
         System.out.println("v5");
         if(true){
-            System.out.println("v6");System.out.println("v4");
-            System.out.println("v5");
-            System.out.println("v6");System.out.println("v4");
-            System.out.println("v5");
-            System.out.println("v6");System.out.println("v4");
-            System.out.println("v5");
-            System.out.println("v6");System.out.println("v4");
-            System.out.println("v5");
-            System.out.println("v6");System.out.println("v4");
+          System.out.println("v6");System.out.println("v4");
+          System.out.println("v5");
+          System.out.println("v6");System.out.println("v4");
+          System.out.println("v5");
+          System.out.println("v6");System.out.println("v4");
+          System.out.println("v5");
+          System.out.println("v6");System.out.println("v4");
+          System.out.println("v5");
+          System.out.println("v6");System.out.println("v4");
+          System.out.println("v5");
+          System.out.println("v6");System.out.println("v4");
+          System.out.println("v5");
+          System.out.println("v6");System.out.println("v4");
+          System.out.println("v5");
+          System.out.println("v6");System.out.println("v4");
+          System.out.println("v5");
+          System.out.println("v6");System.out.println("v4");
+          System.out.println("v5");
+          System.out.println("v6");       
+          System.out.println("v6");
         }
-        System.out.println("v5");
-        System.out.println("v6");System.out.println("v4");
-        System.out.println("v5");
-        System.out.println("v6");
     }
 
     public static void main(String[] args) {
