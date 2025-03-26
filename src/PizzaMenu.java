@@ -7,14 +7,14 @@ public class PizzaMenu {
 
     //Metoden tilføjer menukortet til et PizzaMenu objekt
     public void addPizzaMenu() {
-        this.addPizza("Margarita",49,1,"Tomato sauce, Cheese");
-        this.addPizza("Hawaii", 55, 2,"Tomato sauce, Cheese, Ham, Pineapple");
-        this.addPizza("Pep dress", 55, 3,"Tomato sauce, Cheese, Pepperoni, Dressing");
-        this.addPizza("Marios recommended",60, 4,"Tomato sauce, Cheese, Ham, Pepperoni");
-        this.addPizza("Meat lover", 69, 5, "Tomato sauce, Cheese, Ham, Bacon, Pepperoni, Beef, Chicken");
-        this.addPizza("Kea special", 75, 6,"Tomato sauce, Cheese, Ham, Bacon, Pepperoni, Dressing");
-        this.addPizza("Giga chad", 75, 7,"Tomato sauce, Cheese, flank steak, parmigiano");
-        this.addPizza("The rizzler", 75, 8,"Tomato sauce, Cheese, Chicken, Bacon, Pepperoni");
+        this.addPizza("Margarita",49,1,"Tomato sauce, Cheese...............................................");
+        this.addPizza("Hawaii", 55, 2,"Tomato sauce, Cheese, Ham, Pineapple..................................");
+        this.addPizza("Pep dress", 55, 3,"Tomato sauce, Cheese, Pepperoni, Dressing..........................");
+        this.addPizza("Marios recommended",60, 4,"Tomato sauce, Cheese, Ham, Pepperoni.......................");
+        this.addPizza("Meat lover", 69, 5, "Tomato sauce, Cheese, Ham, Bacon, Pepperoni, Beef, Chicken.......");
+        this.addPizza("Kea special", 75, 6,"Tomato sauce, Cheese, Ham, Bacon, Pepperoni, Dressing............");
+        this.addPizza("Giga chad", 75, 7,"Tomato sauce, Cheese, flank steak, parmigiano......................");
+        this.addPizza("The rizzler", 75, 8,"Tomato sauce, Cheese, Chicken, Bacon, Pepperoni..................");
         this.addPizza("Hangover", 75, 9,"Tomato sauce, Cheese, Ham, Bacon, Pepperoni, Dressing");
         this.addPizza("Worse hangover", 80, 10,"Tomato sauce, Cheese, Ham, Bacon, Pepperoni, Chicken, Dressing");
         this.addPizza("worst hangover", 85, 11,"Tomato sauce, Cheese, Extra cheese, Pepperoni, Dressing");
