@@ -28,9 +28,11 @@ public class Order {
         return deliveryTimeMinutes;
     }
 
-    void addOrderDeliveryTime(Scanner scanner) {
-        System.out.println("Write your delivery time as 00:00 hours:minutes");
-        String input = scanner.nextLine();
+    void addOrderDeliveryTime(Scanner scanner){
+        String input;
+
+        System.out.println("Skriv leverings tid som 00:00 timer:minutter");
+        input = scanner.nextLine();
 
         String[] timeSplit = input.split(":");
         deliveryTimeHours = Integer.parseInt(timeSplit[0]);
@@ -39,21 +41,30 @@ public class Order {
 
     //addPizza metoden tager den pizzamenuen som parametrer for at tilføje pizza'er fra den allerde etablerede menu
     //og kopiere dem til vores ordrerliste
-    void addPizza(PizzaMenu menu, String pizzaName) {
-        ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
-        for (Pizza p : pizzaMenu) {
-            if (p.getName().equalsIgnoreCase(pizzaName)) {
-                pizzaList.add(pizzaMenu.get(p.getPizzaNumber() - 1));
+    void addPizza(PizzaMenu menu, String pizzaName){
+            try {
+                ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
+                for(Pizza p : pizzaMenu){
+                    if(p.getName().equalsIgnoreCase(pizzaName)){
+                        pizzaList.add(pizzaMenu.get(p.getPizzaNumber()-1));
+                    }
+                }
+            } catch (IndexOutOfBoundsException e) {
+                System.out.println("Ugyldigt valg");
             }
-        }
-
     }
+
 
     //Begge addPizza metode kan bruges afhængigt af om man giver et navn eller nummer
     //som input parametrer
-    void addPizza(PizzaMenu menu, int pizzaNumber) {
-        ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
-        pizzaList.add(pizzaMenu.get(pizzaNumber - 1));
+    void addPizza(PizzaMenu menu, int pizzaNumber){
+        try {
+            ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
+            pizzaList.add(pizzaMenu.get(pizzaNumber - 1));
+        }
+        catch (IndexOutOfBoundsException e){
+            System.out.println("Ugyldigt valg");
+        }
     }
 
     //metode til at beregne prisen på en ordre
@@ -76,17 +87,7 @@ public class Order {
     //Order toString override til at printe alle pizzaer på en ordre og dens ID/nummer, samt afhentningstidspunkt
     public String toString() {
         String pizzas;
-        if (deliveryTimeHours == 0 && deliveryTimeMinutes == 0) {
-            pizzas = "Order " + orderID + " for " + deliveryTimeHours + "0:" + deliveryTimeMinutes + "0\n";
-            for (Pizza pizza : pizzaList) {
-                pizzas += pizza + "\n";
-            }
-        } else if (deliveryTimeHours == 0) {
-            pizzas = "Order " + orderID + " for " + deliveryTimeHours + "0:" + deliveryTimeMinutes + "\n";
-            for (Pizza pizza : pizzaList) {
-                pizzas += pizza + "\n";
-            }
-        } else if (deliveryTimeMinutes == 0) {
+        if (deliveryTimeMinutes == 0) {
             pizzas = "Order " + orderID + " for " + deliveryTimeHours + ":" + deliveryTimeMinutes + "0\n";
             for (Pizza pizza : pizzaList) {
                 pizzas += pizza + "\n";
