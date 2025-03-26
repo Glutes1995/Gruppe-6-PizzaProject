@@ -71,9 +71,13 @@ public class OrderList {
             System.out.println("Indtast navnet eller nummer på pizzaen. Indtast done til at afslutte bestillingen.");
             userInput = scanner.nextLine();
         }
-        order.addOrderDeliveryTime(scanner);
-        orderList.add(order);
-        this.sortOrders();
+        if (order.pizzaList.isEmpty()) {
+            System.out.println("Ugyldig ordre\n");
+        } else {
+            order.addOrderDeliveryTime(scanner);
+            orderList.add(order);
+            this.sortOrders();
+        }
     }
 
     //metode til at fjerne en ordre fra ordrelisten
