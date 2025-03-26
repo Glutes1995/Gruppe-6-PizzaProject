@@ -8,9 +8,9 @@ public class Main {
         //Pizzamenu objekt og instantiering af objekt
         PizzaMenu pizzaMenu = new PizzaMenu();
         pizzaMenu.addPizzaMenu();
-        System.out.println("v1");
-        System.out.println("v2");
-        System.out.println("v3");
+        System.out.println("v4");
+        System.out.println("v5");
+        System.out.println("v6");
 
         Scanner scanner = new Scanner(System.in);
         boolean actionMenu = true;
