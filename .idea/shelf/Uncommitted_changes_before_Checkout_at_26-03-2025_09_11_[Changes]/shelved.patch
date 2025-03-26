@@ -1,0 +1,49 @@
+Index: src/OrderList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.ArrayList;\r\nimport java.util.Scanner;\r\n\r\npublic class OrderList {\r\n    //OrderList instansvariable\r\n    private ArrayList<Order> orderList = new ArrayList<>();\r\n    private ArrayList<Order> orderHistoryList = new ArrayList<>();\r\n\r\n    //metode til at beregne dagens omsætning. Altså beregne alle odrepriser på ordrehistorikken\r\n    public void orderRevenue() {\r\n        int sum = 0;\r\n        for (Order order : orderHistoryList) {\r\n            sum += order.sumPizzaPrices();\r\n        }\r\n        System.out.println(\"Daily revenue: \" + sum + \",-\\n\");\r\n    }\r\n\r\n    //denne metode kan tilføje et givent odre-objekt til ordre-listen\r\n    void addOrder(PizzaMenu menu, Scanner scanner) {\r\n        Order order = new Order();\r\n        System.out.println(\"Enter the name or number of a pizza or type done to end the order.\");\r\n        String userInput = scanner.nextLine();\r\n\r\n        //tilføjer pizzaer til odren indtil man skriver done\r\n        while (!userInput.equalsIgnoreCase(\"done\")) {\r\n            //try catch fanger fejl ved at omdanne en String til en Integer\r\n            try {\r\n                int pizzaNumber = Integer.parseInt(userInput);\r\n                order.addPizza(menu, pizzaNumber);\r\n            } catch (NumberFormatException e) {\r\n                order.addPizza(menu, userInput);\r\n            }\r\n\r\n            System.out.println(\"Enter the name or number of a pizza or type done to end the order.\");\r\n            userInput = scanner.nextLine();\r\n        }\r\n        order.addOrderDeliveryTime(scanner);\r\n        orderList.add(order);\r\n        this.sortOrders();\r\n    }\r\n\r\n    //metode til at fjerne en ordre fra ordrelisten\r\n    public void removeOrder(Scanner scanner) {\r\n        System.out.println(\"Type in order id to remove\");\r\n        int orderID = scanner.nextInt();\r\n        scanner.nextLine();\r\n        if (!isOrderOnList(orderID)) return;\r\n        for (Order order : orderList) {\r\n            if (orderID == order.getOrderID()) {\r\n                orderList.remove(order);\r\n                System.out.println(\"Order \" + order.getOrderID() + \" has been removed from the list\\n\");\r\n                return;\r\n            }\r\n        }\r\n    }\r\n\r\n    //metode til at rykke en færdig ordre over på ordrehistorikken\r\n    public void saveOrder() {\r\n        for (Order order : orderList) {\r\n            orderList.remove(order);\r\n            orderHistoryList.add(order);\r\n            System.out.println(\"order \" + order.getOrderID() + \" has been removed from the list and saved in the order history\\n\");\r\n            break;\r\n        }\r\n    }\r\n\r\n    //metoden checker om en given ordre er på ordrelisten\r\n    public boolean isOrderOnList(int orderID) {\r\n        for (Order order : orderList) {\r\n            if (orderID == order.getOrderID()) return true;\r\n        }\r\n        System.out.println(\"Order not found\\n\");\r\n        return false;\r\n    }\r\n\r\n    //metoden sorterer Order objekter i orderlisten. Ved at give et Order objekt til compareTo metoden, kan den sammenligne to Order objekter.\r\n    public void sortOrders() {\r\n        orderList.sort(Order::compareTo);\r\n    }\r\n\r\n    public void delivery(Scanner scanner){\r\n        System.out.println(\"Ønsker kunden at få ordren leveret? Indtast ja eller nej\" +\r\n                \"\\n Leveringen koster 50,-\");\r\n        String answer = scanner.nextLine();\r\n\r\n        if(answer.equalsIgnoreCase(\"nej\")){\r\n            //metoden slutter\r\n        } else if(answer.equalsIgnoreCase(\"ja\")){\r\n            //tilføj leveringspris til ordren\r\n        } else {\r\n            System.out.println(\"Indtast enten ja eller nej\");\r\n        }\r\n\r\n    }\r\n\r\n    //OrderList toString override til at printe alle odre på ordre listen\r\n    public String toString() {\r\n        String orders = \"\";\r\n        for (Order order : orderList) {\r\n            orders += order + \"\\n\";\r\n        }\r\n        return orders;\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/OrderList.java b/src/OrderList.java
+--- a/src/OrderList.java	(revision 86d0d19f0f9ba3a61e38a01ba36b206fef3bbb6b)
++++ b/src/OrderList.java	(date 1742976683913)
+@@ -78,27 +78,12 @@
+         orderList.sort(Order::compareTo);
+     }
+ 
+-    public void delivery(Scanner scanner){
+-        System.out.println("Ønsker kunden at få ordren leveret? Indtast ja eller nej" +
+-                "\n Leveringen koster 50,-");
+-        String answer = scanner.nextLine();
+-
+-        if(answer.equalsIgnoreCase("nej")){
+-            //metoden slutter
+-        } else if(answer.equalsIgnoreCase("ja")){
+-            //tilføj leveringspris til ordren
+-        } else {
+-            System.out.println("Indtast enten ja eller nej");
+-        }
+-
+-    }
+-
+-    //OrderList toString override til at printe alle odre på ordre listen
+-    public String toString() {
+-        String orders = "";
+-        for (Order order : orderList) {
+-            orders += order + "\n";
+-        }
+-        return orders;
+-    }
+-}
+\ No newline at end of file
++        //OrderList toString override til at printe alle odre på ordre listen
++        public String toString () {
++            String orders = "";
++            for (Order order : orderList) {
++                orders += order + "\n";
++            }
++            return orders;
++        }
++    }
+\ No newline at end of file

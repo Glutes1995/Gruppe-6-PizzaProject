@@ -1,0 +1,21 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.Scanner;\r\n\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision c0620096ae18282b169bcb04f180043f56ea26c5)
++++ b/src/Main.java	(date 1742836144937)
+@@ -2,5 +2,9 @@
+ 
+ public class Main {
+     public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        PizzaMenu menu = new PizzaMenu();
++        menu.addPizzaMenu(menu);
++        menu.changePrice(scanner);
+     }
+ }
+\ No newline at end of file
