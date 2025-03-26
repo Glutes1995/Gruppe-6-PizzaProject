@@ -13,6 +13,13 @@ public class Pizza {
         this.topping = topping;
     }
 
+    Pizza(Pizza pizza){
+        this.name = pizza.name;
+        this.price = pizza.price;
+        this.pizzaNumber = pizza.pizzaNumber;
+        this.topping = pizza.topping;
+    }
+
     //Getters for at kunne tilgå Pizza attributes/instansvariable udenfor Pizza klassen
     public String getName() {
         return name;

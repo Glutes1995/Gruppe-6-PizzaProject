@@ -42,16 +42,20 @@ public class Order {
     //addPizza metoden tager den pizzamenuen som parametrer for at tilføje pizza'er fra den allerde etablerede menu
     //og kopiere dem til vores ordrerliste
     void addPizza(PizzaMenu menu, String pizzaName){
-            try {
-                ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
-                for(Pizza p : pizzaMenu){
-                    if(p.getName().equalsIgnoreCase(pizzaName)){
-                        pizzaList.add(pizzaMenu.get(p.getPizzaNumber()-1));
-                    }
+        try {
+            ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
+            Pizza newPizza;
+
+            for(Pizza p : pizzaMenu){
+                if(p.getName().equalsIgnoreCase(pizzaName)){
+                    newPizza = pizzaMenu.get(p.getPizzaNumber()-1);
+                    pizzaList.add(newPizza);
+                    break;
                 }
-            } catch (IndexOutOfBoundsException e) {
-                System.out.println("Ugyldigt valg");
             }
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Ugyldigt valg");
+        }
     }
 
 
@@ -60,7 +64,9 @@ public class Order {
     void addPizza(PizzaMenu menu, int pizzaNumber){
         try {
             ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
-            pizzaList.add(pizzaMenu.get(pizzaNumber - 1));
+            Pizza newPizza = new Pizza(pizzaMenu.get(pizzaNumber - 1));
+
+            pizzaList.add(newPizza);
         }
         catch (IndexOutOfBoundsException e){
             System.out.println("Ugyldigt valg");
