@@ -25,7 +25,6 @@ public class OrderList {
             for (Pizza pizzaI : orderI.pizzaList) {
                 String currentName = pizzaI.getName();
                 int count = 0;
-
                 // Tæl, hvor ofte 'currentName' forekommer i hele historikken
                 for (Order orderN : orderHistoryList) {
                     for (Pizza pizzaN : orderN.pizzaList) {
@@ -34,7 +33,6 @@ public class OrderList {
                         }
                     }
                 }
-
                 // Opdater 'mest solgte pizza', hvis denne pizza har højere count
                 if (count > maxCount) {
                     maxCount = count;
@@ -42,7 +40,6 @@ public class OrderList {
                 }
             }
         }
-
         // Udskriv resultatet
         if (maxCount >= 2) {
             System.out.println("Mest solgte pizza er: " + mostRepeatedName + " (solgt " + maxCount + " gange)");
@@ -67,7 +64,6 @@ public class OrderList {
             } catch (NumberFormatException e) {
                 order.addPizza(menu, userInput);
             }
-
             System.out.println("Indtast navnet eller nummer på pizzaen. Indtast done til at afslutte bestillingen.");
             userInput = scanner.nextLine();
         }

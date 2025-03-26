@@ -32,7 +32,7 @@ public class Main {
                     System.out.println(pizzaMenu);
                     break;
 
-                case "2": //Lav bestilling
+                case "2": //Laver og tilføjer bestilling
                     orderList.addOrder(pizzaMenu, scanner);
                     break;
 
@@ -45,7 +45,7 @@ public class Main {
                     orderList.removeOrder(scanner);
                     break;
 
-                case "5": //Se dagens omsætning
+                case "5": //Se dagens omsætning og mest populære
                     orderList.orderRevenue();
                     orderList.mostSoldPizza();
                     break;

@@ -20,35 +20,22 @@ public class Order {
         return orderID;
     }
 
-    public int getDeliveryTimeHours() {
-        return deliveryTimeHours;
-    }
-
-    public int getDeliveryTimeMinutes() {
-        return deliveryTimeMinutes;
-    }
-
     void addOrderDeliveryTime(Scanner scanner) {
-        String input;
-
         System.out.println("Skriv leverings tid som 00:00 timer:minutter");
-        input = scanner.nextLine();
+        String input = scanner.nextLine();
 
         String[] timeSplit = input.split(":");
         deliveryTimeHours = Integer.parseInt(timeSplit[0]);
         deliveryTimeMinutes = Integer.parseInt(timeSplit[1]);
     }
 
-    //addPizza metoden tager den pizzamenuen som parametrer for at tilføje pizza'er fra den allerde etablerede menu
-    //og kopiere dem til vores ordrerliste
+    //addPizza metoden tager pizzamenuen som parametrer for at tilføje en kopi af en pizza fra pizzamenuen til en ordre
     void addPizza(PizzaMenu menu, String pizzaName) {
         try {
             ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
-            Pizza newPizza;
-
-            for (Pizza p : pizzaMenu) {
-                if (p.getName().equalsIgnoreCase(pizzaName)) {
-                    newPizza = pizzaMenu.get(p.getPizzaNumber() - 1);
+            for (Pizza pizza : pizzaMenu) {
+                if (pizza.getName().equalsIgnoreCase(pizzaName)) {
+                    Pizza newPizza = new Pizza(pizzaMenu.get(pizza.getPizzaNumber() - 1));
                     pizzaList.add(newPizza);
                     break;
                 }
@@ -58,14 +45,11 @@ public class Order {
         }
     }
 
-
-    //Begge addPizza metode kan bruges afhængigt af om man giver et navn eller nummer
-    //som input parametrer
+    //Begge addPizza metode kan bruges afhængigt af om man giver et navn eller nummer som input parametrer
     void addPizza(PizzaMenu menu, int pizzaNumber) {
         try {
             ArrayList<Pizza> pizzaMenu = menu.getPizzaMenu();
             Pizza newPizza = new Pizza(pizzaMenu.get(pizzaNumber - 1));
-
             pizzaList.add(newPizza);
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Ugyldigt valg");
