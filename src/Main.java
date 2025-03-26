@@ -53,7 +53,7 @@ public class Main {
 
                 case "6": //Ændre en pris på en pizza
                     System.out.println(pizzaMenu);
-                    //Tilføj metoden til at ændre prisen
+                    pizzaMenu.changePrice(scanner);
                     break;
 
 
