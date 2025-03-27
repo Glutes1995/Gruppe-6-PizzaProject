@@ -26,46 +26,26 @@ public class Main {
             //Læser brugerens input
             String actions = scanner.nextLine();
 
-
             switch (actions) {
-                case "1": //Viser pizza menu
-                    System.out.println(pizzaMenu);
-                    break;
-
-                case "2": //Lav bestilling
-                    orderList.addOrder(pizzaMenu, scanner);
-                    break;
-
-                case "3": //afslut en ordre, flytter en ordre til ordrehistorikken
-                    System.out.println(orderList);
-                    orderList.saveOrder(scanner);
-                    break;
-
-                case "4": //Fjern en bestilling (Hvis Alfonso fatfinger en bestilling)
-                    orderList.removeOrder(scanner);
-                    break;
-
-                case "5": //Se dagens omsætning
-                    orderList.orderRevenue();
-                    orderList.mostSoldPizza();
-                    break;
-
-                case "6": //Ændre en pris på en pizza
-                    pizzaMenu.changePrice(scanner);
-                    break;
-
-
-                case "7": //Afslutter programmet
-                    System.out.println("Programmet afsluttes");
-                    actionMenu = false;
-                    break;
-
-
-                default: //Hvis brugeren indtaster ugyldigt valg
-                    System.out.println("Indtast et tal fra 1-7");
-
+                //Viser pizza menu
+                case "1" -> System.out.println(pizzaMenu);
+                //Laver og tilføjer bestilling
+                case "2" -> orderList.addOrder(pizzaMenu, scanner);
+                //afslut en ordre, flytter en ordre til ordrehistorikken
+                case "3" -> orderList.saveOrder(scanner);
+                //Fjern en bestilling (Hvis Alfonso fatfinger en bestilling)
+                case "4" -> orderList.removeOrder(scanner);
+                //Se dagens omsætning og mest populære
+                case "5" -> orderList.orderRevenue();
+                //Ændre en pris på en pizza
+                case "6" -> pizzaMenu.changePrice(scanner);
+                //Afslutter programmet
+                case "7" -> actionMenu = false;
+                //Hvis brugeren indtaster ugyldigt valg
+                default -> System.out.println("Indtast et tal fra 1-7");
             }
         }
         scanner.close();
+        System.out.println("Programmet afsluttes");
     }
 }
