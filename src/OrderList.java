@@ -13,6 +13,7 @@ public class OrderList {
             sum += order.sumPizzaPrices();
         }
         System.out.println("Dagens omsætning er: " + sum + ",-\n");
+        mostSoldPizza();
     }
 
     // Finder og viser den mest solgte pizza på tværs af alle ordrer
