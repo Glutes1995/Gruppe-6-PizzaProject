@@ -1,8 +1,8 @@
 # Gruppe-6-PizzaProject
 # Authors:
-# Glutes1995
-# Joshua-kea
-# SimAbild
-# Lornst
-# GoZavCode
-# Frontenden
+# Github: Glutes1995 - Martin Underbjerg
+# Github: Joshua-kea - Joshua Svensson
+# Github: SimAbild -Simon Lund Abildtrup
+# Github: Lornst - August Gosden
+# Github: GoZavCode - Gonaid Muslim
+# github: Frontenden - Michael Plum Bertelsen
