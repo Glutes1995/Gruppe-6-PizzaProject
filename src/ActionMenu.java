@@ -2,13 +2,11 @@ import java.util.Scanner;
 
 public class ActionMenu {
     public static void main(String[] args) {
-
         //Generelle variabler, instanser og objekter
 
         //Pizzamenu objekt og instantiering af objekt
         PizzaMenu pizzaMenu = new PizzaMenu();
         pizzaMenu.addPizzaMenu();
-
 
         Scanner scanner = new Scanner(System.in);
         boolean actionMenu = true;

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class PizzaMenu {
@@ -93,7 +94,7 @@ public class PizzaMenu {
 
             //Tjekker om pizzaen er på menuen
             if (!isPizzaOnList(pizzaNumber)) {
-                System.out.println("Pizzaen kunne ikke findes\n");
+                System.out.println("Ugyldigt input\n");
                 return;
             }
 
@@ -109,9 +110,9 @@ public class PizzaMenu {
                     return;
                 }
             }
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException | InputMismatchException e) {
             if (!isPizzaOnList(userChoice)) {
-                System.out.println("Pizzaen kunne ikke findes");
+                System.out.println("Ugyldigt input\n");
                 return;
             }
             //Ændrer pris med pizzanavn
