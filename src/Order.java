@@ -21,12 +21,36 @@ public class Order {
     }
 
     void addOrderDeliveryTime(Scanner scanner) {
+        boolean incorrectInput = false;
+
+        do{
+            System.out.println("Skriv leverings tid som 00:00 timer:minutter");
+            input = scanner.nextLine();
+
+            try{
+                String[] timeSplit = input.split(":");
+
+                deliveryTimeHours = Integer.parseInt(timeSplit[0]);
+                deliveryTimeMinutes = Integer.parseInt(timeSplit[1]);
+                if(deliveryTimeHours > 23 || deliveryTimeMinutes > 59 || deliveryTimeHours < 0 || deliveryTimeMinutes < 0){
+                    System.out.println("Ugyldigt afhentningstidspunkt");
+                    incorrectInput = true;
+                }else{
+                    incorrectInput = false;
+                }
+            }catch(NumberFormatException e){
+                System.out.println("Ugyldigt afhentningstidspunkt");
+                incorrectInput = true;
+            }
+        }while(incorrectInput);
+      
         System.out.println("Skriv leverings tid som 00:00 timer:minutter");
         String input = scanner.nextLine();
 
         String[] timeSplit = input.split(":");
         deliveryTimeHours = Integer.parseInt(timeSplit[0]);
         deliveryTimeMinutes = Integer.parseInt(timeSplit[1]);
+
     }
 
     //addPizza metoden tager pizzamenuen som parametrer for at tilføje en kopi af en pizza fra pizzamenuen til en ordre
