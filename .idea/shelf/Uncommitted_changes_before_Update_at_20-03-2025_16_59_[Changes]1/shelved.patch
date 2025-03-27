@@ -1,0 +1,84 @@
+Index: src/OrderList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.ArrayList;\r\n\r\npublic class OrderList {\r\n    private ArrayList<Order> orderList = new ArrayList<>();\r\n    private ArrayList<Order> orderHistoryList = new ArrayList<>();\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/OrderList.java b/src/OrderList.java
+--- a/src/OrderList.java	(revision 2d7fe7cca426e768cdca4a8a5c9899d3fb8f2406)
++++ b/src/OrderList.java	(date 1742486367856)
+@@ -5,4 +5,4 @@
+     private ArrayList<Order> orderHistoryList = new ArrayList<>();
+ 
+ 
+-}
++}
+\ No newline at end of file
+Index: src/Pizza.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Pizza {\r\n    private String name;\r\n    private int price;\r\n    private int pizzaNumber;\r\n\r\n    public Pizza(String name, int price, int pizzaNumber) {\r\n        this.name = name;\r\n        this.price = price;\r\n        this.pizzaNumber = pizzaNumber;\r\n    }\r\n\r\n    //Getters for Pizza attributes\r\n    public String getName() {\r\n        return name;\r\n    }\r\n\r\n    public int getPrice() {\r\n        return price;\r\n    }\r\n\r\n    public int getPizzaNumber() {\r\n        return pizzaNumber;\r\n    }\r\n\r\n    //Sets Pizza price\r\n    public void setPrice(int price) {\r\n        this.price = price;\r\n    }\r\n\r\n    //toString override to print Pizzas\r\n    public String toString() {\r\n        return name + \": \";\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Pizza.java b/src/Pizza.java
+--- a/src/Pizza.java	(revision 2d7fe7cca426e768cdca4a8a5c9899d3fb8f2406)
++++ b/src/Pizza.java	(date 1742486367832)
+@@ -27,8 +27,8 @@
+         this.price = price;
+     }
+ 
+-    //toString override to print Pizzas
++    //toString override to print a Pizzas name
+     public String toString() {
+-        return name + ": ";
++        return name;
+     }
+ }
+\ No newline at end of file
+Index: src/Order.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.ArrayList;\r\n\r\n\r\npublic class Order {\r\n    private ArrayList<Pizza> pizzaList = new ArrayList<>();\r\n    private int orderIDCounter;\r\n    private static int orderID;\r\n    private int deliveryTimeHours;\r\n    private int deliveryTimeMinutes;\r\n\r\npublic int getOrderID() {\r\n    return orderID;\r\n}\r\npublic int getDeliveryTimeHours()  {\r\n    return deliveryTimeHours;\r\n}\r\npublic int getDeliveryTimeMinutes() {\r\n    return deliveryTimeMinutes;\r\n}\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Order.java b/src/Order.java
+--- a/src/Order.java	(revision 2d7fe7cca426e768cdca4a8a5c9899d3fb8f2406)
++++ b/src/Order.java	(date 1742486367880)
+@@ -1,6 +1,5 @@
+ import java.util.ArrayList;
+ 
+-
+ public class Order {
+     private ArrayList<Pizza> pizzaList = new ArrayList<>();
+     private int orderIDCounter;
+@@ -8,13 +7,16 @@
+     private int deliveryTimeHours;
+     private int deliveryTimeMinutes;
+ 
+-public int getOrderID() {
+-    return orderID;
+-}
+-public int getDeliveryTimeHours()  {
+-    return deliveryTimeHours;
+-}
+-public int getDeliveryTimeMinutes() {
+-    return deliveryTimeMinutes;
+-}
+-}
++    public int getOrderID() {
++        return orderID;
++    }
++
++    public int getDeliveryTimeHours() {
++        return deliveryTimeHours;
++    }
++
++    public int getDeliveryTimeMinutes() {
++        return deliveryTimeMinutes;
++    }
++
++}
+\ No newline at end of file

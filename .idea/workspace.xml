@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7c54e80-2297-4f98-b178-2c97ea6b3336" name="Changes" comment="Added Hello World so that main is working">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="4d6d9efd-ad95-42fb-a9b0-f7054d5bd28b" name="Changes" comment="Fået fikset fejl hvis man indtaster pizza udenfor menu kortet f.eks. 32" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,9 +19,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
+      <map />
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -36,9 +32,12 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Glutes1995/Gruppe-6-PizzaProject.git&quot;,
-    &quot;accountId&quot;: &quot;99a8a99a-fb9b-4281-b99f-c95e53270040&quot;
+    &quot;accountId&quot;: &quot;e92c1884-3d12-49f3-be1f-d6d6ec16d17f&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -53,7 +52,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/glute/IdeaProjects/Gruppe-6-PizzaProject",
     "node.js.detected.package.eslint": "true",
@@ -78,8 +77,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.153" />
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.153" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
       </set>
     </attachedChunks>
   </component>
@@ -95,49 +94,153 @@
       <workItem from="1742238977469" duration="554000" />
       <workItem from="1742239578260" duration="16000" />
       <workItem from="1742253724105" duration="693000" />
-      <workItem from="1742254508463" duration="306000" />
+      <workItem from="1742254508463" duration="3426000" />
+      <workItem from="1742319178870" duration="2460000" />
+      <workItem from="1742327867490" duration="320000" />
+      <workItem from="1742328275963" duration="5000" />
+      <workItem from="1742381699204" duration="793000" />
+      <workItem from="1742393027990" duration="975000" />
+      <workItem from="1742398134528" duration="1244000" />
+      <workItem from="1742471354339" duration="1204000" />
+      <workItem from="1742489975473" duration="5170000" />
     </task>
-    <task id="LOCAL-00001" summary="Adding java project to github repo">
+    <task id="LOCAL-00001" summary="Lavet en Switch menu">
       <option name="closed" value="true" />
-      <created>1742231915707</created>
+      <created>1742810951639</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1742231915707</updated>
+      <updated>1742810951639</updated>
     </task>
-    <task id="LOCAL-00002" summary="Added working main with hello world">
+    <task id="LOCAL-00002" summary="Lavet en Switch menu">
       <option name="closed" value="true" />
-      <created>1742232203430</created>
+      <created>1742811641519</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1742232203430</updated>
+      <updated>1742811641519</updated>
     </task>
-    <task id="LOCAL-00003" summary="trying to merge master into main">
+    <task id="LOCAL-00003" summary="Lavet en Switch menu">
       <option name="closed" value="true" />
-      <created>1742233106690</created>
+      <created>1742812440307</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1742233106690</updated>
+      <updated>1742812440307</updated>
     </task>
-    <task id="LOCAL-00004" summary="trying to merge master into main">
+    <task id="LOCAL-00004" summary="Fjernet pizza objekt instanstieringen">
       <option name="closed" value="true" />
-      <created>1742233325858</created>
+      <created>1742812769104</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1742233325858</updated>
+      <updated>1742812769104</updated>
     </task>
-    <task id="LOCAL-00005" summary="Added Hello World so that main is working">
+    <task id="LOCAL-00005" summary="Fået lavet så UI så brugeren kan færdiggør en bestilling">
       <option name="closed" value="true" />
-      <created>1742254576632</created>
+      <created>1742907932923</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1742254576632</updated>
+      <updated>1742907932923</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fået lavet så UI så brugeren kan færdiggør en bestilling">
+      <option name="closed" value="true" />
+      <created>1742908272369</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742908272369</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Lavet en mest solgte pizza metode">
+      <option name="closed" value="true" />
+      <created>1742910547218</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1742910547218</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Lavet en mest solgte pizza metode">
+      <option name="closed" value="true" />
+      <created>1742910877370</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1742910877370</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fået fikset fejl hvis man indtaster pizza udenfor menu kortet f.eks. 32">
+      <option name="closed" value="true" />
+      <created>1742977989387</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1742977989387</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added space">
+      <option name="closed" value="true" />
+      <created>1742257059467</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1742257059467</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Tilføjet mit github user name">
+      <option name="closed" value="true" />
+      <created>1742300648434</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1742300648434</updated>
+    </task>
+    <task id="LOCAL-00012" summary="slettede overloading constructor">
+      <option name="closed" value="true" />
+      <created>1742328075711</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1742328075711</updated>
+    </task>
+    <task id="LOCAL-00013" summary="tilføjet kode kommentarer til dev">
+      <option name="closed" value="true" />
+      <created>1742486787117</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1742486787117</updated>
+    </task>
+    <task id="LOCAL-00014" summary="tilføjet add/remove/pizza check til Menuen&#10;tilføjet kode kommentarer&#10;tilføjet toString metoder&#10;tilføjet omsætnings beregner">
+      <option name="closed" value="true" />
+      <created>1742491508899</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1742491508899</updated>
+    </task>
+    <task id="LOCAL-00015" summary="oversat engelsk til dansk">
+      <option name="closed" value="true" />
+      <created>1742509544180</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1742509544180</updated>
+    </task>
+    <task id="LOCAL-00016" summary="tilføjet ekstra constructor til pizzaerne på menukortet">
+      <option name="closed" value="true" />
+      <created>1742546934455</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1742546934455</updated>
+    </task>
+    <task id="LOCAL-00017" summary="tilføjet kommentar">
+      <option name="closed" value="true" />
+      <created>1742547121653</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1742547121653</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,11 +249,39 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.name" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding java project to github repo" />
     <MESSAGE value="Added working main with hello world" />
     <MESSAGE value="trying to merge master into main" />
     <MESSAGE value="Added Hello World so that main is working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Hello World so that main is working" />
+    <MESSAGE value="dev test" />
+    <MESSAGE value="added Pizza class to test" />
+    <MESSAGE value="added space" />
+    <MESSAGE value="Tilføjet mit github user name" />
+    <MESSAGE value="slettede overloading constructor" />
+    <MESSAGE value="tilføjet kode kommentarer til dev" />
+    <MESSAGE value="tilføjet add/remove/pizza check til Menuen&#10;tilføjet kode kommentarer&#10;tilføjet toString metoder&#10;tilføjet omsætnings beregner" />
+    <MESSAGE value="oversat engelsk til dansk" />
+    <MESSAGE value="tilføjet ekstra constructor til pizzaerne på menukortet" />
+    <MESSAGE value="tilføjet kommentar" />
+    <MESSAGE value="Lavet en Switch menu" />
+    <MESSAGE value="Fjernet pizza objekt instanstieringen" />
+    <MESSAGE value="fjernede overflødig Pizza constructor" />
+    <MESSAGE value="Fået lavet så UI så brugeren kan færdiggør en bestilling" />
+    <MESSAGE value="Lavet en mest solgte pizza metode" />
+    <MESSAGE value="dev virker igen" />
+    <MESSAGE value="Fået fikset fejl hvis man indtaster pizza udenfor menu kortet f.eks. 32" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fået fikset fejl hvis man indtaster pizza udenfor menu kortet f.eks. 32" />
   </component>
 </project>
